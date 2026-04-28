@@ -1,0 +1,932 @@
+---
+title: "Smart Silver Economy"
+subtitle: "A Six-Week MBA Lecture Plan on AI Healthcare, IoT, and the Business of Aging"
+author: "Global MBA Program — Taiwan Campus"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-title: "Course Contents"
+    toc-location: left
+    number-sections: true
+    theme: cosmo
+    highlight-style: github
+    self-contained: true
+    smooth-scroll: true
+    css: |
+      body { font-size: 1rem; line-height: 1.8; }
+      h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 0.3em; }
+      h2 { color: #34495e; border-bottom: 1px solid #bdc3c7; padding-bottom: 0.2em; }
+      h3 { color: #566573; }
+      .callout { border-radius: 6px; }
+      .week-intro { background: #f4f6f7; border-left: 4px solid #2980b9; padding: 1em 1.2em; border-radius: 0 6px 6px 0; margin-bottom: 1.5em; }
+      .session-block { border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 1.8em; overflow: hidden; }
+      .session-header { background: #2c3e50; color: white; padding: 0.5em 1em; font-weight: 600; font-size: 0.95rem; display: flex; justify-content: space-between; }
+      .session-time { font-size: 0.82rem; opacity: 0.8; font-weight: 400; }
+      .lecture-block { background: #fafafa; padding: 1em 1.2em; border-bottom: 1px solid #e8e8e8; }
+      .activity-block { background: #f0f7ff; padding: 1em 1.2em; }
+      .block-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5em; }
+      .lecture-label { color: #2c3e50; }
+      .activity-label { color: #1a5276; }
+      .output-box { background: #d6eaf8; border-left: 3px solid #2980b9; padding: 0.5em 0.8em; margin-top: 0.6em; border-radius: 0 4px 4px 0; font-size: 0.9rem; }
+      .output-box strong { color: #1a5276; }
+  pdf:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    colorlinks: true
+    geometry: margin=2.5cm
+    fontsize: 11pt
+    linestretch: 1.6
+execute:
+  echo: false
+  warning: false
+---
+
+
+# Course Overview {.unnumbered}
+
+::: {.callout-note}
+## Program Context
+**Institution:** Global MBA Program — Taiwan Campus  
+**Duration:** 6 weeks · 3 sessions per week · 1 hour per session (18 hours total)  
+**Session structure:** 30 minutes lecture + 30 minutes student activity  
+**Approach:** Every session produces a tangible, measurable student output that feeds directly into the Week 6 capstone pitch. Instructor-led cases drawn from publicly available sources; no access to proprietary US datasets required.
+:::
+
+Taiwan is an ideal setting for this course. It has one of the fastest-aging populations in the world, a world-class national health insurance system, and a government actively deploying NT\$100 billion in smart aging investment. That is not a limitation — it is a competitive advantage for this cohort.
+
+## Session Format
+
+Every session in this course follows the same structure:
+
+| Segment | Duration | Purpose |
+|---------|----------|---------|
+| Lecture | 30 minutes | Instructor presents concepts, cases, and frameworks |
+| Student Activity | 30 minutes | Students apply the lecture content and produce a measurable output |
+| Output | Submitted at end of session | Feeds into course portfolio and Week 6 capstone |
+
+## Course Architecture
+
+| Week | Theme | Business Model Thread |
+|------|-------|----------------------|
+| 1 | AI in Healthcare + Business Model Primer | Canvas introduced; Livongo vs. Theranos |
+| 2 | Big Data | Data as a defensible commercial asset |
+| 3 | IoT and AIoT | Hardware + service recurring revenue logic |
+| 4 | Social Pain Points | Pain severity drives willingness to pay |
+| 5 | Smart Silver Economy | Inclusive design as competitive advantage |
+| 6 | Full Business Model + Capstone Pitch | Canvas completed with five weeks of insight |
+
+## Learning Outcomes
+
+By the end of this course, students will be able to:
+
+- Critically evaluate AI healthcare claims using real big tech and Korea case evidence
+- Articulate the commercial logic behind major health data acquisitions
+- Design a basic AIoT architecture appropriate to a senior care context
+- Distinguish between technologically impressive and genuinely appropriate solutions
+- Apply inclusive design principles to a senior-facing product concept
+- Build a complete Business Model Canvas grounded in Taiwan and regional market data
+- Deliver an investor-ready pitch connecting a real pain point to a viable business model
+
+---
+
+# Week 1 — AI in Healthcare: Promise & Reality {#week-1}
+*(with Business Model Primer)*
+
+::: {.week-intro}
+**Central question this week:** For any technology discussed in this course — who pays, who benefits, and who decides?  
+**Korea case introduced:** Lunit (medical AI imaging, KOSDAQ listed, FDA cleared, 65-country deployment)  
+**Capstone connection:** Students begin their Business Model Canvas in Session 1 and refine it every subsequent week.
+:::
+
+---
+
+## Session 1 — The Business Model Before the Technology {#w1s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Opening case: two companies, one question.** Place Theranos and Livongo Health side by side. Both promised to transform healthcare through technology. Both raised enormous sums. Theranos collapsed into fraud; Livongo was acquired by Teladoc for \$18.5 billion in 2020. The first 10 minutes establish a single question: *what was the business model difference?*
+
+Walk through the **Business Model Canvas** using Livongo as a worked example:
+
+- **Customer segment:** Employed adults with Type 2 diabetes
+- **Payer:** Self-insured employer — not the patient
+- **Value proposition:** Measurable blood sugar improvement, not a device
+- **Revenue model:** Per-member-per-month regardless of usage frequency
+- **Key channels:** Employer benefits consultants and health plan partnerships
+
+Then pivot to Taiwan. Show publicly available NHI MediCloud System aggregate statistics: 99.9% population coverage, 35 years of continuous data, 14 outpatient visits per person per year — the highest globally. Show Taiwan's Long-Term Care 2.0 budget: NT\$100 billion over five years.
+
+Close with **Korea parallel:** Kakao Healthcare launched PASTA (blood glucose management app) in 2024 in partnership with Dexcom and Novo Nordisk — Korea's version of the Livongo model, built on a platform (Kakao) that 90%+ of Koreans use daily. Ask: does a stronger consumer brand produce a better healthcare business model?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Business Model Canvas Sprint — First Draft**
+
+Working individually, students complete **four blocks** of the Business Model Canvas for one of the following companies (assigned by instructor):
+
+- Livongo Health *(diabetes management, employer B2B)*
+- Kakao Healthcare PASTA *(blood glucose app, consumer B2C)*
+- Taiwan NHI MediCloud *(public health data platform, government)*
+
+**Blocks to complete:**
+
+1. Customer Segment — who specifically?
+2. Value Proposition — what outcome is promised?
+3. Revenue Stream — who pays, how much, how often?
+4. Key Risk — what is the single assumption most likely to be wrong?
+
+::: {.output-box}
+**Measurable Output:** One completed 4-block Business Model Canvas on the provided template (half A4 page). Students keep this as a living document — it will be updated at the end of every subsequent session based on new knowledge. Submitted to instructor at end of session.
+:::
+
+---
+
+## Session 2 — Big Tech Enters the Clinic {#w1s2}
+
+### 🎓 Lecture — 30 minutes
+
+Show four logos on one slide: Google, Microsoft, Apple, Amazon. Between 2019 and 2024, these companies collectively spent over \$60 billion on healthcare AI. The central question: *what did they learn?*
+
+**Google Med-PaLM 2:** The 2023 *Nature Medicine* paper showed expert-level USMLE performance. STAT News follow-up: Mayo Clinic physicians found it less actionable in real clinical use — longer answers, occasional confident errors. Google restructured its health division in 2023, folding Google Health into DeepMind. Written-down losses: \$1.6 billion.
+
+**Microsoft + Nuance DAX:** \$19.7 billion acquisition in 2021. DAX saves physicians approximately 3 hours per day on clinical documentation. CGMH and NTUH have both piloted ambient documentation in Taiwan. Ask: why did Microsoft pay \$19.7 billion for a voice recognition company rather than building it?
+
+**Apple Watch health platform:** FDA clearances built over six years — ECG and AFib detection (2018), fall detection (2018), blood oxygen (2020). The HEARTLINE study enrolled 150,000 participants with Johnson & Johnson. Apple has never called itself a healthcare company. Is that a strategic choice or a regulatory strategy?
+
+**Amazon One Medical vs. Amazon Care:** Amazon Care was built from scratch and shut down in 2022 after three years. Amazon then acquired One Medical for \$3.9 billion in 2023 — 188 clinics, 767,000 patient records, a functioning care delivery model. The lesson: trust infrastructure in healthcare takes years to earn and cannot be engineered from a standing start.
+
+**Korea case:** Lunit — founded Seoul 2013, KOSDAQ listed 2022, FDA cleared for mammography and chest X-ray AI, deployed in 10,000+ medical institutions across 65 countries. 2024 revenue KRW 54.2 billion (US\$37.2M), up 116% YoY, with 88% from overseas. Compare: a Korean startup that built clinical evidence first (125 published SCI papers) achieved global commercial scale in 11 years.
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Big Tech Healthcare Scorecard**
+
+Teams of three. Each team is assigned one big tech company (Google, Microsoft, Apple, or Amazon) and completes a structured one-page scorecard:
+
+| Dimension | Score 1–5 | Evidence (one sentence) |
+|-----------|-----------|------------------------|
+| Clinical evidence quality | | |
+| Revenue model clarity | | |
+| Taiwan market applicability | | |
+| Regulatory strategy strength | | |
+| Long-term defensibility | | |
+
+After scoring, each team writes a **one-sentence investment verdict:** "We would / would not invest in [Company]'s healthcare division because \_\_\_."
+
+::: {.output-box}
+**Measurable Output:** One completed Big Tech Healthcare Scorecard per team (provided template). Scores and verdicts are read aloud in the final 5 minutes for class comparison. Teams with the most divergent scores explain their reasoning. Submitted to instructor.
+:::
+
+---
+
+## Session 3 — Live Case Analysis and Week Synthesis {#w1s3}
+
+### 🎓 Lecture — 30 minutes
+
+**Demonstration 1 — Google DeepMind retinal disease study.** Open DeepMind's published research page. Walk through the retinal disease detection study at Moorfields Eye Hospital (London) and Aravind Eye Hospital (India): same AI model, consultant-level performance in London, retrained for diabetic retinopathy screening in rural India where specialists are scarce. Two deployment contexts, two business models. *This is the appropriate tech question appearing for the first time.*
+
+**Demonstration 2 — Microsoft CGMH Taiwan pilot.** Open Microsoft's published case study library. Walk through the Chang Gung Memorial Hospital ambient documentation pilot: what was measured, what was found, how CGMH is approaching network rollout.
+
+**Demonstration 3 — Apple ResearchKit on GitHub.** Open Apple's ResearchKit repository (entirely public). Show that free infrastructure provided by Apple has enabled health studies in Taiwan, Japan, and South Korea. Ask: what does Apple gain from making this free?
+
+**Korea case — VUNO DeepCARS.** Korean medical AI company VUNO deploys an AI system that analyses four vital signs to predict in-hospital cardiac arrest risk within 24 hours — detecting warning signals approximately 16 hours before the event. As of late 2025, deployed across 50,000+ hospital beds in Korea including 20+ tertiary general hospitals. FDA Breakthrough Device Designation received 2023. VUNO achieved its first profitable quarter in Q3 2025 after 11 consecutive quarters of revenue growth. Ask: what does an 11-quarter journey to profitability imply for how a Korea or Taiwan medical AI startup should plan its funding runway?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: "Who Pays?" Analysis — Taiwan Healthcare AI**
+
+Working individually, students examine one publicly announced AI healthcare deployment in Taiwan (a list is provided including CGMH ambient documentation, NHI AI chest X-ray screening in rural counties, and NTUH predictive analytics programmes).
+
+For their chosen deployment, students complete a structured one-page analysis:
+
+1. **Who is deploying the AI?** (Hospital, government, private company, joint venture)
+2. **Who is paying for it?** (NHI reimbursement, hospital capex, government grant, vendor-funded pilot)
+3. **Who benefits clinically?** (Patient, physician, hospital administrator)
+4. **Who benefits commercially?** (Technology vendor, hospital, insurer)
+5. **What happens when the pilot ends?** (Likelihood of scaling to paid deployment — High / Medium / Low with one-sentence justification)
+
+::: {.output-box}
+**Measurable Output:** One completed "Who Pays?" analysis page per student. In the final 5 minutes, three students present their scaling likelihood verdict and explain the reasoning. Divergent verdicts are discussed. Students update their Business Model Canvas from Session 1 with any new insights about the Taiwan payer landscape before leaving. Submitted to instructor.
+:::
+
+---
+
+# Week 2 — Big Data: The Fuel of Healthcare AI {#week-2}
+
+::: {.week-intro}
+**Opening provocation:** In 2018, Google CEO Sundar Pichai said AI would be more transformative than fire or electricity. In 2023, Google wrote down \$1.6 billion in healthcare AI losses. The gap between those two moments is what understanding data in healthcare actually looks like.  
+**Korea case introduced:** Kakao Healthcare federated learning platform (16 hospitals, 20M patients) and Korea NHIS as a parallel to Taiwan's NHI.  
+**Capstone connection:** Students identify the data asset their Week 6 product will depend on and assess whether they can access or build it.
+:::
+
+---
+
+## Session 1 — What Health Data Is Actually Worth {#w2s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Google + Mayo Clinic:** A 10-year agreement announced 2019 in which Google Cloud became Mayo's primary cloud provider in exchange for access to 130 years of patient records. Walk through what Mayo received (cloud infrastructure, AI tools, revenue sharing) and what Google received (one of the most clinically rich datasets in existence). Ask: is this a technology deal or a data acquisition deal?
+
+**Microsoft + Epic:** The 2023 announcement of Azure OpenAI embedded directly inside Epic's clinical workflow — used by 250 million patients. Microsoft is not selling to hospitals directly; it is selling to Epic, which sells to hospitals. B2B2B. Ask: where in this chain is the margin captured?
+
+**Amazon + One Medical:** Amazon's healthcare flywheel: Amazon Pharmacy + Quest diagnostics + Alexa + One Medical primary care. Each asset makes the others more valuable. Show the strategic diagram.
+
+**Taiwan's NHI data asset:** Display publicly available NHI statistics: 23 million covered lives, 35 years of data, 14 outpatient visits per person per year (highest globally), multiple *Nature* and *Lancet* citations from NTU and Academia Sinica. Ask: Google paid billions for Mayo's data. Who is capturing the commercial value of Taiwan's NHI data today?
+
+**Korea parallel:** Korea's NHIS makes de-identified claims data available for public health research. Korea's mandatory EMR regulation requires all hospitals to digitise records — producing one of the most complete structured health datasets in Asia alongside Taiwan's NHI. Both countries face the identical governance question: who should be permitted to commercialise this public asset, under what conditions, and with what revenue sharing to the public?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Data Asset Valuation Map**
+
+Teams of three. Using only publicly available information (NHI statistical yearbook, MOHW reports, company press releases), each team maps the health data landscape for one of three sectors:
+
+- **Sector A:** Hospital EHR data (CGMH, NTUH, TMU hospital groups)
+- **Sector B:** Wearable and consumer health data (Apple HealthKit, Samsung Health, LINE Health+ in Taiwan)
+- **Sector C:** Government claims data (NHI MediCloud, LTC 2.0 utilisation records)
+
+For their sector, teams complete a 2×2 table:
+
+| | **Currently commercialised** | **Not yet commercialised** |
+|---|---|---|
+| **High research / commercial value** | | |
+| **Lower research / commercial value** | | |
+
+Teams place specific data types (e.g., "NHI drug interaction longitudinal records") into each quadrant.
+
+::: {.output-box}
+**Measurable Output:** One completed 2×2 Data Asset Valuation Map per team with at least 6 specific data types placed and labelled. Each team presents their top-right quadrant (high value, not yet commercialised) in 90 seconds. Submitted to instructor. Students note which data asset is most relevant to their Week 6 product concept.
+:::
+
+---
+
+## Session 2 — Data Quality, Privacy, and the Hidden Risks {#w2s2}
+
+### 🎓 Lecture — 30 minutes
+
+**The 2019 *Science* paper on algorithmic bias.** Display the actual published chart. A major US healthcare algorithm (Optum, a UnitedHealth subsidiary) used healthcare *cost* as a proxy for healthcare *need*. Because Black patients had historically received less care, they appeared lower-need than they actually were. The algorithm had to be redesigned after the paper was published. Ask: if your senior health AI is trained on data from patients who historically had good access to care, what population does it actually serve?
+
+**Apple differential privacy.** Open Apple's Machine Learning Research Blog (publicly available). Apple learns aggregate health patterns from hundreds of millions of devices without any individual's data leaving their phone. The technique is called differential privacy and it is commercially deployed at consumer scale — not a research concept.
+
+**Microsoft federated learning in healthcare.** Models trained across multiple hospitals without sharing raw patient records. Kakao Healthcare in Korea deployed federated learning across 16 major Korean hospitals by mid-2024, covering approximately 20 million patients, using Google Kubernetes Engine as the infrastructure. Ask: under Taiwan's Personal Data Protection Act, is federated learning the *only* legally viable way to train a cross-hospital AI model?
+
+**Taiwan PDPA and AWS HealthLake.** Open the AWS HealthLake public documentation page. Walk through what it does: ingests unstructured health data, normalises to FHIR standard, enables natural language querying. Show the pricing page. Ask: if a Taiwan hospital group used AWS HealthLake, where does the data physically reside — and is that compliant with Taiwan's regulations on cross-border data transfer?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Data Risk Audit**
+
+Working individually, students are given a one-paragraph description of a hypothetical Taiwan senior health AI startup that is building a fall prediction model. The startup has collected data from three sources: NHI claims records accessed through a research agreement, motion sensor data from 500 volunteer seniors in Taipei, and purchase records from a major pharmacy chain.
+
+Students complete a structured **Data Risk Audit** covering four dimensions:
+
+| Risk Dimension | Risk Level (High / Med / Low) | Specific Risk | Proposed Mitigation |
+|----------------|------------------------------|---------------|---------------------|
+| Bias and representativeness | | | |
+| Privacy and PDPA compliance | | | |
+| Data access continuity | | | |
+| Commercial sensitivity | | | |
+
+Students then write one sentence: *"The single data risk most likely to kill this startup's Series A fundraising round is \_\_\_ because \_\_\_."*
+
+::: {.output-box}
+**Measurable Output:** One completed Data Risk Audit table plus one sentence verdict per student. Three students read their verdict sentence aloud. The class votes (show of hands) on which risk they agree is most severe. Submitted to instructor. Students note the data risks most relevant to their own Week 6 product concept.
+:::
+
+---
+
+## Session 3 — Live Data Exploration and Week Synthesis {#w2s3}
+
+### 🎓 Lecture — 30 minutes
+
+**Live demonstration: Taiwan MOHW Statistical Yearbook.** Open the publicly available Taiwan Ministry of Health and Welfare Statistical Yearbook. Walk students through how to read and interpret aggregate NHI utilisation data: outpatient visits by age group, hospitalisation rates, top diagnosis categories by expenditure, geographic distribution of service utilisation by county.
+
+Focus specifically on the data relevant to senior health: hospitalisation rates for adults over 65, top five diagnosis categories by expenditure in the 65+ age group, counties with the highest and lowest utilisation rates. Show students that the data to identify underserved senior populations exists in public form.
+
+**Korea NHIS data parallel.** Show Korea's equivalent public health data portal. Note that both Taiwan and Korea publish comparable aggregate statistics, both have been cited in top academic journals, and both face the same governance question about commercial use. The countries are running the same experiment in parallel.
+
+**Stanford study finding.** A Stanford study found that 94% of healthcare AI projects fail at the data preparation stage, not the model stage. This is not a headline statistic — walk through *why*: missing values, inconsistent coding across hospitals, demographic imbalances, and the difference between research-grade and production-grade data pipelines.
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Underserved Population Identification**
+
+Using only the public NHI statistical yearbook data shown in the lecture, students work individually to identify **one specific underserved senior population** in Taiwan — defined as a group with demonstrably high disease burden but lower-than-expected recorded service utilisation.
+
+Students document:
+
+1. **Population identified:** (e.g., adults 75+ in Hualien County with diabetes)
+2. **Evidence of high disease burden:** (cite the specific NHI statistic)
+3. **Evidence of low utilisation:** (cite the specific NHI statistic)
+4. **Hypothesised reason for the gap:** (geographic, financial, cultural, or awareness barrier)
+5. **One data-driven intervention:** (what would you do, and which data asset from today would you use to build it?)
+
+::: {.output-box}
+**Measurable Output:** One completed 5-point Underserved Population brief per student (maximum one page). Four students present their identified population in 60 seconds each. Instructor maps all identified populations on a whiteboard grid by county and condition. Students retain their brief — it may become the pain point foundation for the Week 6 pitch. Submitted to instructor.
+:::
+
+---
+
+# Week 3 — IoT and AIoT: Connecting Bodies and Environments {#week-3}
+
+::: {.week-intro}
+**Opening object:** Place an Apple Watch on the desk. This single device, worn by an estimated 100 million people globally, generates more continuous cardiac data than any hospital network in history. This is not a gadget story. It is a regulatory strategy story.  
+**Korea cases introduced:** KT GiGA Genie AI care service, Naver Clova CareCall, SK Telecom NUGU, VUNO DeepCARS at hospital scale, Samsung Galaxy Watch as regional wearable leader.  
+**Capstone connection:** Students draft their product's IoT architecture and calculate its unit economics for the first time.
+:::
+
+---
+
+## Session 1 — The Health IoT Landscape {#w3s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Apple Watch as a clinical platform.** Walk through the regulatory timeline: ECG and AFib detection cleared by FDA in 2018, fall detection 2018, blood oxygen 2020, HEARTLINE study with J&J enrolling 150,000 participants in 2023. The Apple Heart Study enrolled 419,000 participants entirely through an Apple Watch app — the largest cardiovascular study in history by enrolment. Positive predictive value for AFib notification: 84%. Ask: Apple spent an estimated \$50 million on this study and the clinical outcome result was inconclusive. Was it worth it?
+
+**Samsung Galaxy Watch in Korea and Taiwan.** Galaxy Watch blood pressure monitoring feature was cleared by Korean MFDS and Taiwan FDA *before* US FDA approval. Validated by Yonsei University Hospital in Seoul. Samsung has higher wearable market share than Apple in both Korea and Taiwan. Ask: what does this mean for a health AI startup building on wearable data in this region — which platform do you build on first?
+
+**Google Fitbit cautionary tale.** Google acquired Fitbit for \$2.1 billion in 2021 after an 18-month EU regulatory review. Multiple product lines discontinued. EU conditions restrict use of Fitbit health data for advertising. Ask: what is the acquisition actually worth if you cannot use the data for your core business model?
+
+**Korea telecoms as senior care infrastructure — KT GiGA Genie.** KT (Korea Telecom) deployed an AI smart speaker in homes of isolated seniors. The bi-directional service asks questions and records responses in a welfare monitoring system. Negative speech among seniors fell from 32.98% to 8.91% within four months of launch. Social workers can prioritise home visits by checking speaker usage data. 3 million GiGA Genie subscribers provide the base install at near-zero marginal hardware cost. Ask: is this an Amazon Alexa Together strategy executed through a B2G channel rather than a consumer subscription?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Platform Selection Memo**
+
+Working individually, students write a structured **one-page Platform Selection Memo** for a hypothetical Taiwan senior health AI startup that needs to decide which wearable platform to build its product on.
+
+The memo must address:
+
+1. **Platform chosen:** Apple HealthKit, Samsung Health, or a standalone IoT sensor (no wearable platform)
+2. **Taiwan market share rationale:** Use available market data to justify the choice
+3. **Data access terms:** What data can the platform provide, under what conditions?
+4. **Regulatory implication:** Does the chosen platform carry existing FDA or TFDA clearance that benefits the product?
+5. **Risk:** What is the single biggest risk of depending on this platform?
+6. **Verdict:** One sentence — "We build on [Platform] because \_\_\_."
+
+::: {.output-box}
+**Measurable Output:** One completed Platform Selection Memo per student (maximum one page). Students who chose different platforms form groups of two and argue their choice against each other for 3 minutes. Instructor calls on two pairs to share their debate conclusions. Submitted to instructor.
+:::
+
+---
+
+## Session 2 — AIoT for Senior Care: From Monitoring to Prediction {#w3s2}
+
+### 🎓 Lecture — 30 minutes
+
+**CarePredict:** Wrist-worn AIoT device for seniors in assisted living that uses motion *pattern* analysis — not vital signs — to predict health events 4 to 5 days before they occur. Published outcome: 77% reduction in falls detected in advance vs. control facilities. Taiwan market calculation: approximately 1,100 licensed elder care facilities serving 60,000 residents. At NT\$3,000 per resident per month subscription, this is a NT\$2.16 billion annual market that barely exists today.
+
+**Microsoft Azure + Taipei Medical University Hospital.** A publicly available Microsoft case study. Sensors on infusion pumps and imaging equipment feed into Azure IoT Hub, triggering maintenance alerts before equipment fails and rerouting patients when wait times exceed thresholds. Reported outcomes: 23% reduction in equipment downtime, 18% improvement in patient throughput. Ask: this is not clinical AI — it is operational efficiency AI. Which is easier to sell to a hospital CFO?
+
+**Amazon Alexa Together.** \$19.99 per month subscription turning existing Echo devices into senior monitoring hubs — fall detection through built-in motion sensors, urgent help requests, remote family dashboard. An estimated 35% of US adults over 65 already own an Amazon Echo. The marginal cost of adding a senior monitoring subscription is near zero. Ask: does a comparable distribution asset exist in Taiwan?
+
+**Korea — Naver Clova CareCall and SK Telecom NUGU.** Naver's AI makes twice-weekly phone calls to isolated seniors in Busan, Seoul, and Gyeonggi Province — a female voice inquires about daily life, nutrition, health, and mood, retains conversation context across calls, and flags distress signals for human follow-up. 95% of users in Haeundae district (Busan) wished to continue after the trial. SK Telecom's NUGU speaker monitors 3,200 senior homes in Yangcheon district; social workers receive alerts when seniors do not use the device for 24+ hours. Ask: Naver's product requires no device purchase, no app installation, and no digital literacy — it uses the phone the senior already has. What does this imply about where the digital literacy barrier actually sits?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Senior Home Safety AIoT Architecture Design**
+
+Teams of three. Design a senior home safety AIoT system for a specific user persona provided on a card (each team receives a different persona — e.g., "78-year-old woman, lives alone, third-floor apartment in Tainan, has mild hypertension, owns a feature phone, monthly budget NT\$1,200 for any new service").
+
+Teams must specify and justify:
+
+| Component | Choice | Justification | Cost estimate |
+|-----------|--------|---------------|---------------|
+| Sensor type(s) | | | |
+| Communication protocol | | | |
+| Alert recipient | | | |
+| Monthly service fee | | | |
+| **Total hardware cost** | | | **NT\$\_\_\_** |
+
+Hard constraint: total hardware cost must be under NT\$15,000 and monthly fee must fit within the persona's stated budget.
+
+::: {.output-box}
+**Measurable Output:** One completed AIoT Architecture table per team plus a one-sentence design rationale: "We chose [sensor type] over [alternative] because [specific reason related to the persona]." Teams present their architecture in 90 seconds. Instructor challenges the most expensive solution and the cheapest solution to defend their choices. Submitted to instructor. This architecture draft feeds directly into the Week 6 product concept.
+:::
+
+---
+
+## Session 3 — Business Model of Health IoT and Week Synthesis {#w3s3}
+
+### 🎓 Lecture — 30 minutes
+
+**Dexcom: the consumable model and its valuation implications.** Dexcom 2023 revenue: \$3.6 billion, of which 85% comes from consumable sensors replaced every 10 days rather than from hardware. Enterprise value multiple: 8× revenue versus 2–3× for a pure device company. The recurring consumable model is not just a pricing strategy — it is a valuation strategy. Ask: which of your product concepts from today could be restructured as a consumable or subscription?
+
+**Proteus Digital Health vs. Abbott FreeStyle Libre.** Both companies used sensor technology embedded in or worn on the body to track medication or metabolic health. Proteus raised \$172 million and went bankrupt. Abbott FreeStyle Libre has over 100 million sensors sold and \$5 billion in annual revenue. Walk through the business model differences: Proteus depended on pharmaceutical partnerships and reimbursement that never arrived; Abbott targeted consumers directly and built a sensor replacement revenue stream. Same technology category, entirely different commercial outcomes.
+
+**Korea — VUNO DeepCARS at hospital scale.** VUNO's DeepCARS is deployed across 50,000+ hospital beds in Korea. The product is not sold as a one-time installation — it is billed as an ongoing AI monitoring service per bed per month. VUNO achieved 11 consecutive quarters of revenue growth and its first profitable quarter in Q3 2025. Revenue: KRW 10 billion+ in Q3 2025 alone. FDA Breakthrough Device Designation received in 2023. Ask: VUNO built clinical evidence first (Lancet-affiliated journal publication) and commercial scale second. What does this imply about the sequencing of investment for a Taiwan medical AI startup?
+
+**Seoul IoT senior monitoring.** Seoul Municipal Government has installed motion, temperature, humidity, and lighting sensors in homes of the most vulnerable seniors. Data is monitored in real time by responsible institutions and staff are dispatched when no movement is detected for a defined period. This is a B2G procurement model: sensors installed at government expense, ongoing monitoring operated by social care agencies. Ask: what does it cost the Korean government per senior per year, and at that price, would Taiwan's LTC 2.0 programme buy it?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Unit Economics Calculator**
+
+Working individually, students calculate the unit economics for their Week 6 product concept using a structured template:
+
+**Revenue assumptions:**
+- Monthly price per user: NT\$\_\_\_
+- Target number of users in Year 3: \_\_\_
+- Annual revenue Year 3: NT\$\_\_\_
+
+**Cost assumptions:**
+- Hardware cost per user (one-time): NT\$\_\_\_
+- Monthly service cost per user (cloud, support, etc.): NT\$\_\_\_
+- Customer acquisition cost (CAC): NT\$\_\_\_
+
+**Key metrics:**
+- Gross margin per user per month: NT\$\_\_\_
+- Payback period (CAC ÷ monthly gross margin): \_\_\_ months
+- Lifetime value (LTV) at assumed 30-month average retention: NT\$\_\_\_
+- LTV:CAC ratio: \_\_\_:1 *(target: above 3:1)*
+
+Students who cannot yet define their product concept use the CarePredict model (NT\$3,000/month, NT\$8,000 hardware, NT\$1,500 CAC) as a benchmark to practice the calculation method.
+
+::: {.output-box}
+**Measurable Output:** One completed Unit Economics Calculator per student with all cells filled in. Students circle whether their LTV:CAC ratio is above or below 3:1 and write one sentence explaining what they would change to improve it. Three students share their ratio and explanation. Submitted to instructor. This document becomes the financial foundation of the Week 6 pitch deck.
+:::
+
+---
+
+# Week 4 — Social Pain Points: High Tech vs. Appropriate Tech {#week-4}
+
+::: {.week-intro}
+**Opening question (no slide):** How many of you have a grandparent who refuses to use the smartphone you bought them? Show of hands. The technology is not the problem. The adoption is the problem.  
+**Korea cases introduced:** Hyodol AI companion robot, K-elderly crisis demographics, Korea telecoms B2G welfare channel.  
+**Capstone connection:** Students finalise their pain point selection through primary research and the prioritisation matrix. This is the pivot week — everything after this builds on the pain point chosen here.
+:::
+
+---
+
+## Session 1 — Why Adoption Fails {#w4s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Technology adoption among seniors — what the data shows.** AARP Technology and the 50-Plus Survey 2024 (publicly available): 79% of adults over 65 own a smartphone, but only 26% use health apps. Number one barrier: confidence and perceived relevance, not cost or access. Taiwan Ministry of Digital Affairs 2023 survey: LINE app usage among Taiwanese seniors over 70 exceeds 85%, while dedicated health app usage is below 10%.
+
+**High tech vs. appropriate tech — the core tension.** Compare: the \$30,000 AI-powered fall detection camera (requires WiFi, subscription, privacy consent process, family member checking app) versus the NT\$1,500 pressure-sensor bath mat (alerts a caregiver when someone has been on the bathroom floor for more than two minutes, requires a phone call to a neighbour). Both detect falls. One gets installed; one gets talked about at conferences.
+
+**Google Glass vs. Apple Watch — the wearable adoption lesson.** Google Glass launched 2013 as a revolutionary wearable and was discontinued for consumers by 2015 because people would not wear a device that made them look odd in public. Apple Watch succeeded partly because it looks like a watch. Even the world's most sophisticated technology companies discover that human behaviour is harder to change than code.
+
+**LINE Healthcare in Taiwan and Japan.** LINE Health+ delivers health consultations, medication reminders, and chronic disease management through the LINE messaging app already on seniors' phones. Taiwan deployment data is available through LINE's published investor relations materials. Ask: why is a messaging company potentially better positioned for senior health than a medical device company in this market?
+
+**Korea — Hyodol companion robot.** An \$1,800 AI companion robot designed as a cute doll for seniors living alone. Speaks with a child-like voice, provides medication reminders, dementia-prevention quizzes, and daily conversation. Over 12,000 deployed across South Korea, primarily through government welfare programmes. A study of 69 older adults showed reduced depression and improved cognitive scores after six weeks of use. A separate study of 9,000 users showed reduced depression and improved medication adherence. Ethical concerns have been raised about emotional dependency, infantilisation, and the dignity implications of a baby-like device monitoring an elderly person's actions. Ask: if the outcomes are measurable and positive, do the ethical concerns matter commercially?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Adoption Barrier Deconstruction**
+
+Working individually, students select one senior health technology from a provided list (options include: blood pressure app, AI fall detection camera, smart medication dispenser, AI companion robot, continuous glucose monitor, video call tablet for seniors).
+
+Students complete a structured **Adoption Barrier Map**:
+
+| Barrier Type | Specific Barrier for This Product | Severity (1–5) | Proposed Design Fix |
+|-------------|----------------------------------|----------------|---------------------|
+| Digital literacy | | | |
+| Social acceptability | | | |
+| Setup complexity | | | |
+| Ongoing effort required | | | |
+| Cost to the senior | | | |
+| Trust in the technology | | | |
+
+Students then write one sentence: *"The barrier most likely to cause this product to fail in the Taiwan market is \_\_\_ and it could be addressed by \_\_\_."*
+
+::: {.output-box}
+**Measurable Output:** One completed Adoption Barrier Map per student plus one sentence verdict. Students who analysed the same product are grouped together to compare their severity scores. Disagreements of 2+ points on the same barrier are discussed with the class. Submitted to instructor.
+:::
+
+---
+
+## Session 2 — Mapping the Pain Points That Matter {#w4s2}
+
+### 🎓 Lecture — 30 minutes
+
+**Three defining crises of aging in Taiwan.** Display three numbers: 22% — the percentage of Taiwan's senior population living alone (2020 census); 7,000 — annual fall-related hospitalisations among adults over 65 in Taiwan (MOHW data); 300,000 → 600,000 — Taiwanese adults currently living with dementia, projected to double by 2040 (Taiwan Alzheimer's Disease Association).
+
+**Korea's K-elderly crisis as a regional comparison.** One in three Korean seniors lives alone (35.1% of elderly population in one-person households as of 2020). Korea has the highest elderly suicide rate among OECD countries. The country's welfare spending was the second lowest among OECD countries as recently as 2009 — rapid economic growth outpaced welfare system development within a single generation. The government urgency to solve this creates an immediately funded B2G market for senior tech.
+
+**The caregiver shortage — Taiwan's least discussed crisis.** Taiwan currently has approximately 230,000 foreign care workers (predominantly from Indonesia and Vietnam) providing the majority of home-based elder care. Long-Term Care 2.0 is attempting to reduce dependence on foreign labour through technology and community care networks. Ask: if you were advising the Ministry of Health and Welfare on deploying NT\$10 billion in technology to support this transition, what would you fund?
+
+**ElliQ vs. telephone befriending — the cost-effectiveness lesson.** ElliQ AI companion robot deployed by New York State: 80% daily engagement rate, measurable loneliness score reduction, high cost. UK Royal Voluntary Service telephone befriending: comparable loneliness score improvements, approximately 1% of ElliQ's cost per person. Ask: if both interventions work equally well, which should a government fund? What does your answer reveal about what you think technology is *for*?
+
+**Japan's PARO vs. ROBEAR.** PARO (therapeutic seal robot): 5,000 elder care facilities globally, measurable reductions in patient agitation and medication use, government procurement in Taiwan and South Korea. ROBEAR (nursing robot designed to lift patients): approximately \$50 million in development funding, never left the prototype stage — too slow, too expensive, frightened patients. Same country, same funding environment, same policy priority. One reached 5,000 facilities. One never left the lab.
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Pain Point Prioritisation Matrix**
+
+Teams of three. Using the public data points shared in the lecture (Taiwan MOHW statistics, LTC 2.0 utilisation data displayed on screen) plus any additional facts students recall from their Week 2 underserved population brief, each team places **eight senior pain points** on a 2×2 matrix:
+
+```
+HIGH  |  "Invest"           |  "Lead"            |
+Need  |  Severe need,       |  Severe need,       |
+      |  low current WTP    |  high current WTP   |
+      |---------------------|---------------------|
+LOW   |  "Ignore"           |  "Nice to have"     |
+Need  |  Mild need,         |  Mild need,         |
+      |  low WTP            |  high WTP           |
+      +---------------------+---------------------+
+           Low                      High
+                  Willingness to Pay (WTP)
+```
+
+Pain points to place (provided on cards): social isolation, medication non-adherence, fall detection, early dementia screening, caregiver coordination, mobility aids, nutrition monitoring, transportation access.
+
+Teams must agree on placement and write one sentence justifying any pain point they place in the top-right quadrant ("Lead").
+
+::: {.output-box}
+**Measurable Output:** One completed 2×2 matrix with all eight pain points placed and at least one justification sentence per top-right quadrant item. Teams photograph their matrix and submit the image. The instructor overlays all team matrices on a single projected grid to show consensus and divergence. Pain points where teams diverge significantly become the basis for a 5-minute open class discussion. Students mark which pain point they intend to pursue for their Week 6 capstone.
+:::
+
+---
+
+## Session 3 — Empathy Field Preparation and Week Synthesis {#w4s3}
+
+### 🎓 Lecture — 30 minutes
+
+**Human-centred design methodology for senior interviews.** Walk students through IDEO's empathy interview protocol, adapted for senior populations. Show a recorded 10-minute example interview with a 76-year-old woman in Taichung discussing her daily routine, technology use, health concerns, and what she worries about at night. After viewing, the instructor identifies three pain statements (direct quotes revealing an unmet need) and one surprise (something unexpected). Students practice spotting these in the recording.
+
+**Why interview evidence matters in a pitch.** Show two business pitches side by side on screen (hypothetical summaries): Pitch A opens with "Falls are a \$50 billion problem in the US annually." Pitch B opens with "Mrs Chen, 78, lives alone in Tainan. She told us: *I don't fall often, but I'm afraid that when I do, no one will know for a day.*" Ask: which pitch do you believe — and which do you remember? Primary research gives students evidence that no competitor has, stated in the words of the actual customer.
+
+**M-Pesa vs. blockchain remittance — the appropriate tech test.** M-Pesa in Kenya: \$1 mobile money transfer serving 51 million users. A blockchain-based remittance alternative operating in the same market: 50,000 users. Same problem, radically different reach. Ask: what is your equivalent of M-Pesa for your chosen pain point — the simplest intervention that would actually be used by the most people?
+
+**Microsoft RADAR-AD study.** Smartphone sensor data — GPS patterns, typing speed, app usage — used to detect cognitive decline before clinical symptoms appear. Results published through Microsoft Research's public portal. Ask: the data is already being generated by the phones seniors already own. What are the consent, privacy, and commercial implications of using it?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Empathy Interview Preparation Kit**
+
+Working individually, students prepare a complete **Senior Empathy Interview Kit** for the field interview they will conduct before Week 5. This is not a questionnaire — it is an open interview guide designed to surface unspoken needs.
+
+The kit must include:
+
+1. **Target interviewee profile:** Age range, living situation, one health condition or concern (to be confirmed in real interview)
+2. **Opening statement** (2 sentences, non-threatening, explaining purpose without biasing responses)
+3. **Five open-ended questions** (no yes/no questions; each begins with "Tell me about…", "Walk me through…", or "What do you do when…")
+4. **Two follow-up probes** for each question (what to ask if the interviewee gives a short or vague answer)
+5. **Three things to observe** that the interviewee may not say aloud (physical environment, technology in the home, body language)
+6. **Pain statement template:** "I struggle with \_\_\_ because \_\_\_, and what I really wish I had was \_\_\_."
+
+::: {.output-box}
+**Measurable Output:** One completed Empathy Interview Kit per student (maximum two pages). Students exchange kits with a partner and give written feedback on two dimensions: (1) Are the questions genuinely open-ended? (2) Would these questions surface a new insight, or confirm what we already expect? Students revise their kit based on feedback before leaving. **Field assignment:** Conduct one 20-minute interview with a person over 65 before Session 1 of Week 5, transcribe three pain statements and one surprise, and submit the transcript summary before Week 5 begins. Submitted to instructor.
+:::
+
+---
+
+# Week 5 — Smart Silver Economy: Designing for the 60+ {#week-5}
+
+::: {.week-intro}
+**Opening correction:** Show a stock photo of a smiling 70-year-old couple hiking in mountains. Then a stock photo of an 88-year-old woman in a hospital bed. Senior health tech marketing almost always shows the first image while the product is built for the second. The result: products that fit neither population well.  
+**Korea cases introduced:** Hyodol design ethics revisited, Samsung Galaxy Watch regional dominance, Seoul Smart Senior Places government channel.  
+**Capstone connection:** Students complete their product concept sketch and Business Model Canvas draft. Both are submitted at the end of Week 5 and form the basis of the Week 6 pitch.
+:::
+
+---
+
+## Session 1 — Segmentation, Inclusive Design, and Japan's Lessons {#w5s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Senior market segmentation that actually works.** The Stanford Center on Longevity three-way framework applied to Taiwan using public census and LTC utilisation data:
+
+| Segment | Age | Characteristics | Primary Buyer |
+|---------|-----|----------------|---------------|
+| Active independents | 60–74 | High income, high digital adoption | Self (consumer direct) |
+| Supported independents | 75–84 | Moderate needs, family-mediated purchasing | Adult children |
+| Care-dependent | 85+ | Institutional or intensive home care | Facility or government |
+
+Taiwan's Long-Term Care 2.0 primarily serves the third group. The largest unmet market opportunity is in the first and second groups who are not yet in the system.
+
+**Microsoft Inclusive Design Toolkit.** Open it live at microsoft.com/design/inclusive. Walk through the origin story: designing for permanent disability produced solutions useful for everyone. Closed captions (designed for deaf users) are now used by 80% of viewers in noisy environments. Touchscreen keyboard (designed for users who cannot type physically) became the standard input for 6 billion smartphones. The principle applied to senior tech: an app designed for someone with early dementia — large text, single-step interactions, voice confirmation, family visibility — is also the best medication app for anyone with a complex regimen.
+
+**Japan's 20-year experiment: PARO reached 5,000 facilities, ROBEAR reached zero.** PARO succeeded because it fit into existing nursing home routines, required no behaviour change from staff, and produced measurable outcomes (reduced agitation, reduced medication use) that facility operators could report to government funders. ROBEAR failed because it was too slow for real nursing workflows, too frightening for patients, and too expensive for any realistic procurement budget. The difference was not the technology — it was whether the technology fit the workflow and the stakeholder incentives of the people who would have to adopt it.
+
+**Korea — Seoul Smart Senior Places.** Seoul is renovating 105 senior centres across 11 districts into "smart senior centres" with care robots, cognitive training tables, smart home systems, and electronic whiteboards. Two flagship centres opened in 2024. Ask: a product approved for Seoul's 105 senior centre network has immediate access to the majority of the city's 1.5 million+ senior residents through a trusted public institution. What is the equivalent channel in Taiwan?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Segment Selection and Value Proposition Statement**
+
+Working individually, students use their field interview findings (submitted before this session) to complete a structured **Segment and Value Proposition Definition**:
+
+1. **Target segment** (choose one of the three Stanford tiers): Active independent / Supported independent / Care-dependent
+2. **Specific sub-profile:** Age range, living situation, one defining health concern, one defining technology behaviour (e.g., "uses LINE daily, owns a Galaxy Watch, does not use any health apps")
+3. **Pain point** (from their Week 4 matrix, confirmed or refined by field interview): one sentence
+4. **Current alternative** (what does this person do today instead of using your product?): one sentence
+5. **Value proposition statement** in the format: *"We help [segment] to [achieve outcome] by [mechanism], unlike [current alternative] which [limitation]."*
+6. **Buyer confirmation:** Is the target user also the payer? If not, who is?
+
+::: {.output-box}
+**Measurable Output:** One completed Segment and Value Proposition Definition per student (half A4 page). Students read their value proposition statement aloud (no explanation, just the statement). Class votes: thumbs up if the pain is clear, thumbs sideways if it is ambiguous, thumbs down if the value is unclear. Students whose statements receive thumbs sideways or down revise in the remaining time. This value proposition statement is the single most important sentence in the Week 6 pitch. Submitted to instructor.
+:::
+
+---
+
+## Session 2 — Product Design, Cognitive Health, and the Simplicity Lesson {#w5s2}
+
+### 🎓 Lecture — 30 minutes
+
+**The fall detection spectrum.** Falls are the leading cause of injury death in adults over 65 in Taiwan (MOHW injury surveillance data). Three solutions at different price and technology levels:
+
+| Solution | Cost | Mechanism | Key Limitation |
+|---------|------|-----------|----------------|
+| Shower grab bar | NT\$500 | Prevents falls physically | Passive; requires installation |
+| Apple Watch fall detection | Included with device | Accelerometer + gyroscope; calls emergency services after 60s immobility | Requires device ownership and charge |
+| SafelyYou AI camera | High, institutional | Computer vision detects pre-fall posture; 40% fall reduction published | Privacy trade-off; institutional only |
+
+Calculate cost per prevented fall for each. Which would a Taiwan senior living operator invest in? Does the answer change between a Xinyi premium facility and a government-subsidised Pingtung facility?
+
+**Cognitive health: three companies, three models.** Lumosity: 150 million users, freemium at \$11.99/month, 2016 FTC settlement of \$2 million for claiming games prevented Alzheimer's without clinical evidence. Linus Health: digital cognitive assessment replacing paper MMSE in primary care, 500+ clinic partners, published validation showing earlier MCI detection. Adora Brain Health (Taipei Veterans General Hospital): tablet-based cognitive training deployed to outpatient dementia clinics in Taiwan, local clinical evidence, no commercial scaling. Three products, three regulatory strategies, three levels of evidence. Which would you fund — and which would you prescribe?
+
+**GrandPad — the simplicity masterclass.** \$40 per month including device, 4G cellular data, and a family management app. No app store, no settings, one tap to make a video call. 100,000+ active users, 92% monthly retention — among the highest in consumer tech. Compare with an iPad: count the steps a senior with early cognitive decline must complete to make a video call to their grandchild. On GrandPad: one tap. The technology is far less sophisticated. The adoption is far higher.
+
+**Korea — Hyodol and the ethics of design for compliance.** Hyodol's design was deliberately non-threatening: a cute doll with a child-like voice, designed to be hugged. Outcomes are measurable — reduced depression, improved medication adherence, delayed nursing home admission. But researchers have raised concerns: does a baby-like robot monitoring an elderly person's actions and gestures diminish dignity? Does the emotional bond seniors form with the robot raise the question of whether a commercial product should be fostering dependency? These questions do not have clean answers — and students building products for this segment will face them.
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Product Concept Sketch**
+
+Working individually, students produce a **one-page Product Concept Sketch** — not a polished deck, a rough but complete description of the product they will pitch in Week 6. The sketch uses a fixed template:
+
+| Field | Content |
+|-------|---------|
+| Product name (working title) | |
+| Target segment (Stanford tier) | |
+| Core pain point addressed | |
+| What the product does (2 sentences max) | |
+| What it does NOT do (1 sentence — intentional scope limit) | |
+| Primary IoT/AI component | |
+| Interface the senior interacts with | |
+| Interface the family/caregiver sees | |
+| Who pays | |
+| Monthly price | |
+| Biggest adoption risk | |
+| How this product is different from what exists today | |
+
+Students are not permitted to use more space than the template provides. Constraint forces clarity.
+
+::: {.output-box}
+**Measurable Output:** One completed Product Concept Sketch per student on the provided one-page template. Students pin their sketch on the wall (physical classroom) or share screen (virtual). Five minutes of silent gallery walk — every student reads three other students' sketches and leaves one written question on a sticky note. Students return to their own sketch, read the questions, and spend the final 5 minutes revising the biggest weakness the questions revealed. Submitted to instructor. This sketch is the product foundation of the Week 6 pitch.
+:::
+
+---
+
+## Session 3 — Competitive Landscape, Channel Strategy, and Pitch Preparation {#w5s3}
+
+### 🎓 Lecture — 30 minutes
+
+**Accessibility audit — live demonstration.** The instructor loads three live apps on the classroom projector: GrandPad's public demo, the Taiwan Health Pass app (NHI mobile application), and LINE Health+. Students evaluate each against five WCAG 2.1 criteria: text size, colour contrast, tap target size, error recovery, and cognitive load. The Taiwan Health Pass audit is typically the most instructive — a government product used by seniors that frequently fails basic criteria that commercial products pass.
+
+**Five realistic Taiwan distribution channels.** Walk through each with a named example:
+
+1. **LTC 2.0 network** — 1,700 government care stations; zero direct marketing cost for approved products
+2. **Convenience store chains** — 7-Eleven's ibon machine health service rollout; seniors already trust and visit daily
+3. **Pharmacy chains** — Watsons, Cosmed, Poya, 500+ locations each; pharmacist recommendation is a high-trust senior endorsement
+4. **LINE** — 85% penetration among Taiwanese seniors over 70; no app install required
+5. **Hospital and clinic networks** — CGMH and NTUH innovation partnerships; public application processes; highest clinical credibility, longest sales cycle
+
+**Korea — Samsung Galaxy Watch as the regional wearable infrastructure.** Samsung has higher wearable market share than Apple in both Korea and Taiwan. A health AI startup building on Samsung Health data in these markets starts from a larger addressable install base than one building on Apple HealthKit — and faces different regulatory and data access terms. Show Samsung's published developer API terms for health data access. Ask: for your product concept, which distribution channel could you realistically access within 12 months of launch?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Competitive Landscape Map and Channel Selection**
+
+Working individually, students complete two connected outputs:
+
+**Part A — Competitive Landscape Map (15 minutes)**
+
+Students place 6 competitors (real or hypothetical) in their chosen pain point space on a 2×2 matrix:
+- Horizontal axis: Tech sophistication (Low → High)
+- Vertical axis: Distribution reach in Taiwan (Narrow → Wide)
+
+Students mark their own product concept with an X and write one sentence: *"We occupy white space at [position] because [reason]."*
+
+**Part B — Channel Selection (15 minutes)**
+
+Students select their **primary go-to-market channel** from the five options covered in the lecture and complete a one-paragraph rationale addressing:
+
+- Why this channel reaches the target segment
+- What the channel requires from the product (regulatory clearance, pricing, partnerships)
+- Estimated time to first paying customer through this channel
+- CAC estimate through this channel (use benchmarks from Week 3 Unit Economics session)
+
+::: {.output-box}
+**Measurable Output:** One completed Competitive Landscape Map (photograph or digital) plus one Channel Selection paragraph per student. Students whose competitive maps show their product in the same white space as a classmate's product are paired together — they have 3 minutes to identify how their products are genuinely differentiated. Submitted to instructor. Together with the Product Concept Sketch and the Unit Economics Calculator, this forms the pre-work package for the Week 6 capstone pitch.
+:::
+
+---
+
+# Week 6 — Business Model: Full Build and Capstone Pitch {#week-6}
+
+::: {.week-intro}
+**Opening:** Return to the Business Model Canvas each student began in Session 1 of Week 1. Students have five weeks of domain knowledge, primary research, a unit economics calculation, a product sketch, and a competitive map. The canvas is no longer abstract vocabulary. It is a tool for making decisions with real money.  
+**Korea cases revisited:** Lunit's dual revenue model, Kakao Healthcare's B2C-to-B2H pivot, and VUNO's 11-quarter path to profitability as benchmarks for the pitch panel.  
+**Capstone connection:** All outputs from Weeks 1–5 converge into the Week 6 pitch. The rubric has been visible since Week 1.
+:::
+
+---
+
+## Session 1 — Revenue Models, Payers, and Regulatory Moats {#w6s1}
+
+### 🎓 Lecture — 30 minutes
+
+**Return to the canvas with domain knowledge.** Show the Philips HealthSuite canvas from Week 1, then show Philips' 2021 strategic update — the company divested its entire consumer electronics division to focus exclusively on connected health infrastructure. Ask: how has your understanding of each canvas block changed since Week 1? The canvas was vocabulary in Week 1. Today it is a decision tool.
+
+**Revenue model deep dive with published financials:**
+
+- **Omada Health:** \$732M raised through 2024; 500,000 members; per-member-per-month paid by employers and health plans. Pricing requires clinical evidence to justify. Ask: if a Taiwan company replicated Omada's product without its clinical trial infrastructure, could it command the same price?
+- **Dexcom:** \$3.6B 2023 revenue; 85% from consumable sensors. Enterprise value multiple: 8× revenue vs. 2–3× for pure device companies. Recurring revenue is a valuation strategy, not just a pricing strategy.
+- **Hinge Health:** \$6.2B valuation 2024; \$120 per enrolled employee per year vs. \$4,000 average surgical episode cost avoided. The ROI calculation sells itself.
+
+**Korea — Lunit's dual revenue model as a benchmark.** Lunit 2024 revenue: KRW 54.2 billion (US\$37.2M), up 116% YoY, with 88% from overseas. Two revenue streams: (1) hospital AI diagnostics SaaS (Lunit INSIGHT); (2) pharmaceutical AI biomarker platform (Lunit SCOPE, demand up 182% YoY). 125 published SCI papers — the evidence base is built into the product positioning. Ask: Lunit generates 88% of its revenue outside Korea. What does this tell Taiwan health AI companies about the size of the domestic market relative to the investment required to build a defensible product?
+
+**Regulatory as moat.** Butterfly Network: FDA-cleared handheld ultrasound turned into a \$1.8 billion company — the regulatory clearance itself became the competitive barrier. Veracyte: FDA-cleared genomic cancer tests command 70% gross margins because no competitor can replicate without the same clinical evidence. Ask: which regulatory pathway is relevant to your product — TFDA, NHIA reimbursement, or both?
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Revenue Model Selection and Justification**
+
+Working individually, students select a revenue model for their Week 6 product from the following options and complete a structured justification:
+
+| Revenue Model | Example | Monthly revenue/user | CAC implication |
+|--------------|---------|---------------------|----------------|
+| Consumer subscription | GrandPad \$40/month | NT\$500–1,500 | High (digital ads) |
+| Employer/insurer B2B | Omada PMPM | NT\$100–300/member | Medium |
+| B2G government contract | KT GiGA Genie | Per-unit grant-funded | Low (procurement) |
+| Hospital SaaS | VUNO DeepCARS per bed | NT\$2,000–5,000/bed/month | High (sales cycle) |
+| Hardware + consumable | Dexcom sensor replacement | Varies | Moderate |
+
+For their chosen model, students complete:
+
+1. **Revenue model chosen and why** (2 sentences)
+2. **Who specifically writes the cheque** (named organisation type in Taiwan)
+3. **Price point with justification** (benchmark to one real comparable)
+4. **Year 3 revenue projection** (units × price, showing working)
+5. **Biggest revenue model risk** (one sentence)
+
+::: {.output-box}
+**Measurable Output:** One completed Revenue Model Selection page per student. Students share their Year 3 revenue projection with the class. The instructor notes the highest and lowest projections and asks both students to defend their assumptions. Submitted to instructor. This page becomes the financial slide in the Week 6 pitch deck.
+:::
+
+---
+
+## Session 2 — Go-to-Market, Funding, and Pitch Rehearsal {#w6s2}
+
+### 🎓 Lecture — 30 minutes
+
+**Why direct-to-consumer almost never works for senior health tech in Taiwan.** Show the CAC calculation: Facebook and LINE digital advertising CPM rates, conversion rates for health app downloads among adults over 65, trial-to-paid conversion rates for subscription health services. The resulting CAC of NT\$3,000–8,000 against a NT\$500/month price point produces a payback period of 6–16 months. The unit economics of D2C senior health marketing do not work. This is not a Taiwan-specific problem — it is why Best Buy acquired Lively in the US for \$800 million rather than letting Lively try to grow through digital advertising.
+
+**Five Taiwan distribution channels with unit economics benchmarks:**
+
+| Channel | CAC estimate | Time to first paying customer | Requirement |
+|---------|-------------|------------------------------|-------------|
+| LTC 2.0 government network | NT\$500–1,500 | 12–24 months | Policy approval |
+| Pharmacy chain | NT\$1,000–2,500 | 6–12 months | Retail partnership |
+| 7-Eleven ibon kiosk | NT\$800–2,000 | 9–18 months | TAEC partnership |
+| LINE Health+ integration | NT\$300–1,000 | 6–12 months | LINE developer agreement |
+| Hospital / clinic network | NT\$1,500–4,000 | 18–36 months | TFDA clearance + pilot |
+
+**Funding landscape — where Taiwan senior health startups get money:**
+
+- National Development Fund Smart Healthcare program: NT\$5 billion; eligibility on NDC website
+- AppWorks accelerator: explicitly identified aging and health as 2024–2028 priority; open applications
+- AARP AgeTech Collaborative: accepts international applicants including Taiwan; funded Korea and Israel companies
+- SoftBank Vision Fund 2: published Asia aging investment thesis
+
+**Korea — Kakao Healthcare's B2C-to-B2H pivot as the cautionary model.** Kakao Healthcare maintained PASTA as a free consumer app despite limited commission revenue. 2024 revenue KRW 23.1B (+93.5%) but operating losses widened to KRW 39.2B. Management rights acquired by CHA Hospital & Bio Group in late 2025; board restructured around hospital executives in 2026; company pivoting to hospital EHR business. The B2C-to-B2H trajectory that Kakao followed in three years is the path most consumer senior health companies follow eventually. Those who anticipate it from the start arrive at profitability faster.
+
+---
+
+### ✏️ Student Activity — 30 minutes
+
+**Activity: Pitch Rehearsal — Solo Run-Through**
+
+Students have 20 minutes to assemble their complete pitch narrative from all previous session outputs:
+
+**Pitch structure (8 minutes total):**
+
+| Slide | Content | Source output |
+|-------|---------|--------------|
+| 1. The pain | Quote from field interview + NHI/MOHW statistic | Week 4 interview, Week 2 data |
+| 2. The user | Target segment profile + persona | Week 5 Session 1 |
+| 3. The product | Product concept sketch | Week 5 Session 2 |
+| 4. The technology | IoT architecture | Week 3 Session 2 |
+| 5. The business model | Revenue model + unit economics | Week 6 Session 1 + Week 3 Session 3 |
+| 6. The channel | Primary channel + CAC | Week 5 Session 3 |
+| 7. The ask | Funding amount, use of funds, 18-month milestone | New — completed today |
+
+Students spend 10 minutes rehearsing their pitch alone (timed with a phone). They then pair with one classmate and deliver the pitch in 4 minutes each — half the actual time — forcing them to identify which content is essential and which is padding.
+
+::: {.output-box}
+**Measurable Output:** Each student submits a one-paragraph written summary of the single slide they consider weakest and what they will do before the Week 6 Session 3 pitch to strengthen it. Partners provide one written sentence of feedback on each other's weakest slide. Submitted to instructor. Instructor reviews all submissions before Session 3 and prepares targeted Q&A questions for each team based on the weaknesses identified.
+:::
+
+---
+
+## Session 3 — Capstone Pitch {#w6s3}
+
+### 🎓 Lecture — 10 minutes
+
+**Final framing — 10 minutes only.** Return to the opening question from Session 1 of Week 1: who pays, who benefits, and who decides? Ask three students to answer this question for their own product in one sentence each. These three sentences open the pitch session.
+
+Remind students that the panel is playing three specific roles: a Taiwan-focused health tech investor (instructor), a Long-Term Care 2.0 regional administrator (guest 1), and a hospital chief innovation officer from a major Taiwan health system (guest 2). Each panellist is looking for something different. The investor wants to see LTV:CAC ratio and a named channel. The LTC administrator wants to see how the product fits into existing government workflow without adding staff burden. The hospital CIO wants to see regulatory pathway clarity and integration with existing clinical systems.
+
+---
+
+### 🎓 Capstone Pitch — 50 minutes {#w6s3-pitch}
+
+**Format:** Each student pitches 8 minutes, followed by 5 minutes of Q&A from the panel.
+
+*(In cohorts larger than 5 students, pitches begin in the previous session or run in parallel rooms with peer evaluators. Instructor confirms scheduling in Week 5.)*
+
+**Panel roles:**
+
+- **Instructor** — Taiwan-focused health tech investor; asks about unit economics, LTV:CAC ratio, and revenue model defensibility
+- **Guest 1** — Long-Term Care 2.0 regional administrator; asks about government procurement fit, staff workflow impact, and policy alignment
+- **Guest 2** — Hospital chief innovation officer (CGMH or NTUH network, arranged in advance); asks about TFDA regulatory pathway, EHR integration, and clinical evidence requirements
+
+**Evaluation rubric** *(distributed to students in Week 1 Session 1 and carried throughout the course):*
+
+| Criterion | Weight | What is evaluated |
+|-----------|--------|------------------|
+| Pain point clarity and primary research quality | 20% | Is the pain real, specific, and evidenced by interview data and public statistics? |
+| Solution feasibility and appropriate tech judgement | 20% | Does the product fit the user's actual life, or does it ask them to change? |
+| Business model coherence | 25% | Real revenue benchmarks, named Taiwan channel partner, realistic unit economics |
+| Go-to-market realism for Taiwan | 20% | CAC justified, channel named and accessed within 18 months |
+| Presentation and Q&A | 15% | Clarity, time discipline, honest handling of hard questions |
+
+**Peer scoring:** Each audience member completes a simplified rubric for each pitch (pain clarity and business model coherence only). Peer scores are averaged and shared with the presenter alongside instructor scores.
+
+::: {.output-box}
+**Final Measurable Output:** Complete pitch delivered to panel. Written instructor feedback returned within one week. Top-scoring pitch submitted to AppWorks accelerator open call and AARP AgeTech Collaborative international application if timing aligns. All students retain their full session output portfolio (10 documents from Weeks 1–6) as a professional development record and the foundation for any real startup activity after the course.
+:::
+
+---
+
+# Course Arc Summary {.unnumbered}
+
+The business model lens is planted in Week 1 Session 1 and returned to at the end of every subsequent session. Every student activity produces a document that feeds the Week 6 pitch — the canvas from Session 1, the risk audit from Week 2, the unit economics calculator from Week 3, the pain point matrix and interview transcript from Week 4, the product sketch and competitive map from Week 5, and the revenue model and go-to-market rationale from Week 6. By the time students stand up to pitch, they are not constructing a business model for the first time. They are presenting one they have been stress-testing for six weeks.
+
+**Portfolio of session outputs students accumulate:**
+
+| Week | Session | Output Document |
+|------|---------|----------------|
+| 1 | 1 | Business Model Canvas — 4-block first draft |
+| 1 | 2 | Big Tech Healthcare Scorecard |
+| 1 | 3 | "Who Pays?" Taiwan Healthcare AI Analysis |
+| 2 | 1 | Data Asset Valuation Map |
+| 2 | 2 | Data Risk Audit |
+| 2 | 3 | Underserved Population Brief |
+| 3 | 1 | Platform Selection Memo |
+| 3 | 2 | AIoT Architecture Design |
+| 3 | 3 | Unit Economics Calculator |
+| 4 | 1 | Adoption Barrier Map |
+| 4 | 2 | Pain Point Prioritisation Matrix |
+| 4 | 3 | Empathy Interview Kit + Field Interview Transcript |
+| 5 | 1 | Segment and Value Proposition Statement |
+| 5 | 2 | Product Concept Sketch |
+| 5 | 3 | Competitive Landscape Map + Channel Selection |
+| 6 | 1 | Revenue Model Selection and Year 3 Projection |
+| 6 | 2 | Pitch Rehearsal Weakness Summary |
+| 6 | 3 | **Capstone Pitch (all outputs assembled)** |
+
+Taiwan is not framed as a peripheral market receiving ideas from elsewhere. It is a super-aged society with world-class health data infrastructure, a government actively deploying NT\$100 billion in aging-related investment, and a senior population whose LINE adoption rate is one of the most valuable distribution assets in the region. Korea is not treated as a foreign market — it is a five-year preview of where Taiwan's medical AI sector, government welfare programmes, and senior consumer market are heading. The capstone pitch is not an academic exercise. It is the first version of something a student could take to AppWorks, the National Development Fund, or the Long-Term Care 2.0 programme on Monday morning.
+
+---
+
+*Document prepared for internal academic use. All case data sourced from publicly available financial disclosures, published academic studies, government statistical databases, and company investor relations materials.*

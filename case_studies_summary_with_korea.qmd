@@ -1,0 +1,311 @@
+---
+title: "Smart Silver Economy — Case Study Reference Table"
+subtitle: "All cases referenced across the six-week MBA lecture plan, including Korea additions"
+author: "Global MBA Program — Taiwan Campus"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    toc-location: left
+    theme: cosmo
+    highlight-style: github
+    self-contained: true
+    smooth-scroll: true
+    page-layout: full
+    css: |
+      body { font-size: 0.95rem; line-height: 1.7; }
+      h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 0.3em; }
+      h2 { color: #34495e; border-bottom: 1px solid #bdc3c7; padding-bottom: 0.2em; margin-top: 2em; }
+      h3 { color: #566573; margin-top: 1.5em; }
+      table { font-size: 0.86rem; }
+      thead { background-color: #f4f6f7; }
+      .korea-section { background: #f0f7ff; border-left: 4px solid #1a6eb5; padding: 0.6em 1em; border-radius: 0 6px 6px 0; margin: 1.2em 0 0.6em; font-size: 0.9rem; font-weight: 500; color: #1a4a7a; }
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    colorlinks: true
+    geometry: margin=2cm
+    fontsize: 10pt
+    linestretch: 1.4
+execute:
+  echo: false
+  warning: false
+---
+
+# How to Use This Table {.unnumbered}
+
+This reference document compiles all **66 case studies** cited across the six-week Smart Silver Economy lecture plan — the original 51 cases plus **15 new Korea cases** added in this revision. Cases are grouped by week and sub-divided into Global/Big Tech cases and Korea-specific cases. Each entry captures the organisation, the core facts used in class, the key teaching point, and the primary business model lesson it illustrates.
+
+Korea cases have been added because South Korea offers a uniquely instructive parallel to Taiwan: it became a super-aged society in 2025 (20%+ over 65), has a nationally mandated electronic health record system generating research-grade data, and has produced a cohort of medical AI companies — Lunit, VUNO, Kakao Healthcare — that have navigated both domestic regulatory approval and international FDA clearance. These cases give Taiwan MBA students a close regional comparator that is neither the US nor Japan.
+
+---
+
+# Week 1 — AI in Healthcare & Business Model Primer {#w1}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 1 | **Theranos collapse** | Theranos | Raised \$700M+; founder convicted of fraud; product never worked as claimed | Compelling vision without an operational model is not a business | Value proposition must be grounded in reality; clinical validation is not optional |
+| 2 | **Livongo Health acquisition** | Livongo / Teladoc | Acquired for \$18.5B in 2020; payer was self-insured employer, not patient; per-member-per-month model | Separating the user from the payer is a structural decision, not an afterthought | Revenue model built around measurable outcome improvement, not device ownership |
+| 3 | **Philips HealthSuite** | Philips | Hardware company repositioned as health data platform; divested consumer electronics in 2021 | Strategic pivots at scale are possible and sometimes necessary | Platform model replaces product model; recurring data services outvalue one-time hardware sales |
+| 4 | **Google Med-PaLM 2** | Google / DeepMind | 2023 *Nature Medicine*: expert-level USMLE performance; Mayo Clinic physicians found it less actionable in real clinical use | Benchmark performance ≠ clinical utility | AI capability without workflow integration has limited commercial value |
+| 5 | **Google Health restructure** | Google | Folded Google Health into DeepMind in 2023; \$1.6B in written-down losses | Even \$100B companies can fail to find a viable health strategy | Market entry must account for clinical complexity, not just technical capability |
+| 6 | **Microsoft + Nuance DAX** | Microsoft / Nuance | \$19.7B acquisition 2021; DAX saves physicians ~3 hours/day on documentation; piloted at CGMH and NTUH in Taiwan | Workflow integration is more valuable than raw AI capability | B2B enterprise SaaS; ROI framed as physician time recovered, not clinical outcome |
+| 7 | **Apple Watch health platform** | Apple | ECG/AFib cleared by FDA 2018; fall detection 2018; HEARTLINE study enrolled 150,000 with J&J | Regulatory clearance built incrementally over years | Platform differentiation; health features increase device LTV without positioning Apple as a medical company |
+| 8 | **Amazon One Medical** | Amazon | \$3.9B acquisition 2023; 188 clinics; integrates with Amazon Pharmacy, Quest, Alexa | Primary care as the anchor of a health platform flywheel | Acquisition of proven model vs. building from scratch; each asset amplifies the others |
+| 9 | **Amazon Care shutdown** | Amazon | Built from scratch; shut down 2022 after three years | Building a healthcare business differs from acquiring one that already works | Organic build fails without clinical trust infrastructure that takes years to earn |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: South Korea's medical AI sector provides a close regional comparator. Korean companies Lunit, VUNO, and Kakao Healthcare have navigated the same regulatory journey from domestic clearance to FDA approval that Taiwan companies aspire to. These cases also illustrate that a strong national health data infrastructure — Korea's mandatory EMR system covering 100% of hospitals — produces a different, and often more tractable, starting condition for AI healthcare than the fragmented data environments of the US or Europe.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K1 | **Lunit AI medical imaging** | Lunit (KOSDAQ: 328130) | Founded 2013; KOSDAQ listed 2022; FDA cleared for mammography and chest X-ray AI; deployed in 10,000+ medical institutions across 65 countries; 2024 revenue KRW 54.2B (US\$37.2M), up 116% YoY; 88% of revenue from overseas; acquired Volpara Health (NZ) to expand breast cancer screening | Korean medical AI company achieving commercial scale through dual revenue streams: imaging diagnostics for hospitals and biomarker analysis for pharmaceutical companies | B2B hospital SaaS plus pharmaceutical data licensing; clinical evidence base (125 published SCI papers) is the primary pricing justification — no evidence, no premium |
+| K2 | **VUNO DeepCARS cardiac arrest prediction** | VUNO | Founded 2014; AI analyses vital signs (blood pressure, heart rate, respiration, temperature) to predict in-hospital cardiac arrest risk within 24 hours; detects warning signs ~16 hours before cardiac arrest; deployed across 50,000+ hospital beds in Korea including 20+ tertiary hospitals; FDA Breakthrough Device Designation 2023; 11 consecutive quarters of revenue growth; first profitable quarter Q3 2025 (revenue KRW 10B+) | Vital sign AI deployed at scale in general wards — not an ICU product, which is what makes it commercially viable at hospital level | B2B hospital deployment model; reimbursement pathway via Korea MFDS new medical technology assessment; FDA BDD accelerates US market entry without requiring full pre-market approval |
+| K3 | **Kakao Healthcare PASTA and B2C-to-B2H pivot** | Kakao Healthcare | Healthcare unit of Kakao (Korea's dominant messaging platform); launched PASTA blood glucose management app with Dexcom and Novo Nordisk in 2024; federated learning data platform deployed to 16+ major Korean hospitals covering ~20M patient records; 2024 revenue KRW 23.1B (+93.5% YoY) but operating loss KRW 39.2B; pivoted from B2C to B2H (business-to-hospital) in 2026 after B2C profitability proved elusive | Messaging platform brand recognition does not translate into health app monetisation; free consumer app with CGM commission revenue is structurally unprofitable | B2C to B2H pivot illustrates the fundamental senior health tech tension: consumers benefit but employers, hospitals, and governments pay — the earlier a company accepts this, the faster it reaches profitability |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 2 — Big Data {#w2}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 10 | **Google + Mayo Clinic 10-year partnership** | Google / Mayo Clinic | Google Cloud became Mayo's primary cloud provider; access to 130 years of patient records; revenue sharing arrangement | Health data is an asset that can be licensed, not just used internally | Data access deals are as strategic as product acquisitions |
+| 11 | **Microsoft + Epic integration** | Microsoft / Epic | Azure OpenAI embedded inside Epic; used by 250M patients; B2B2B distribution | Embedding AI in existing clinical workflow is more effective than replacing it | B2B2B model; margin captured at the integration layer |
+| 12 | **Apple ResearchKit (open source)** | Apple | Free infrastructure; Heart, Women's Health, and Hearing Studies each enrolled 100,000+; used in Taiwan, Japan, South Korea | Making infrastructure free builds data network effects and regulatory goodwill | Ecosystem strategy: give away the platform, retain the relationship with 1B+ device owners |
+| 13 | **AWS HealthLake** | Amazon | Ingests unstructured health data; normalises to FHIR; natural language querying; cross-border residency questions under Taiwan PDPA | Cloud infrastructure as substrate beneath most health AI products | Infrastructure-as-a-service model |
+| 14 | **Google Fitbit acquisition** | Google | \$2.1B acquisition 2021; 18-month EU review; EU conditions restrict use of data for advertising; product lines discontinued | Regulatory conditions on acquisitions can neutralise strategic rationale | Acquisition value depends on what you are legally permitted to do with the acquired asset |
+| 15 | **Optum algorithmic bias (2019 *Science* paper)** | Optum / UnitedHealth | Algorithm used cost as proxy for need; systematically under-served Black patients; redesigned after publication | Training data reflects historical inequity; AI reproduces it at scale | Biased models create legal, reputational, and regulatory risk |
+| 16 | **Apple differential privacy** | Apple | Aggregate patterns learned from hundreds of millions of devices without individual data leaving device; published on Apple ML Research Blog | Privacy-preserving AI is commercially viable at consumer scale | Privacy architecture enables compliance without sacrificing model quality |
+| 17 | **Microsoft federated learning in healthcare** | Microsoft | Models trained across hospitals without sharing raw patient records; published research publicly available | Cross-institutional AI training without centralised data | Federated approach may be legally required under Taiwan's PDPA for cross-hospital AI |
+| 18 | **Taiwan NHI data asset** | Taiwan MOHW / NHIA | 23M covered lives; 35 years of continuous data; 14 outpatient visits per person per year; multiple *Nature* and *Lancet* citations | One of the world's most valuable health datasets is publicly funded and under-commercialised | Public data asset with no current commercial capture mechanism |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: South Korea's EMR regulation mandates that all hospitals digitise and retain patient records, creating a nationally comprehensive structured dataset that rivals Taiwan's NHI in research value. Kakao Healthcare's federated learning platform and Korea's NHIS research data programme both illustrate how private companies and public institutions are beginning to commercialise this asset — with important lessons for Taiwan about what works and what does not.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K4 | **Kakao Healthcare federated learning platform** | Kakao Healthcare / Google Cloud | Healthcare Data Research Suite (HRS) deployed to 16 Korean hospitals by mid-2024; federated learning using Google Kubernetes Engine allows joint model training without sharing raw data; 20M patients covered across participating hospitals by end 2024; validated at major university hospitals including Korea University, Yonsei, Ewha, and Samsung Medical Center | Federated learning at national hospital-network scale is now operationally proven, not just theoretically possible | Data platform B2B SaaS model: hospitals pay for the platform, pharmaceutical companies pay for the research outputs — two distinct revenue streams from the same underlying data infrastructure |
+| K5 | **Korea National Health Insurance Service (NHIS) research database** | Korea NHIS | Korea's national health insurance covers the entire population; NHIS makes de-identified claims data available for public health research through a formal application process; regularly used by international researchers; Korea mandatory EMR regulations require all hospitals to digitise records — producing one of the most complete structured health datasets in Asia alongside Taiwan's NHI | Two of the world's best health research datasets — Taiwan NHI and Korea NHIS — are both in East Asia, both publicly funded, and both under-commercialised relative to their research value | The policy question for both Taiwan and Korea is identical: who should be permitted to commercialise this public asset, under what conditions, and with what revenue sharing to the public — a governance question that will define the next decade of health AI in both countries |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 3 — IoT and AIoT {#w3}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 19 | **Apple Heart Study** | Apple / Stanford | 419,000 participants; 84% positive predictive value for AFib notification; clinical outcome improvement inconclusive; ~\$50M estimated cost | Regulatory positioning and clinical evidence are distinct goals | \$50M study investment yielded regulatory moat, not clinical outcome proof — both have commercial value |
+| 20 | **Samsung Health Monitor (Korea / Taiwan)** | Samsung | Galaxy Watch blood pressure cleared in South Korea and Taiwan before US FDA; validated by Yonsei University Hospital | Asia-Pacific as regulatory testbed for health IoT | First-mover clearance in key markets creates distribution advantage before US entry |
+| 21 | **CarePredict AIoT system** | CarePredict | Activity pattern monitoring; predicts health events 4–5 days in advance; 77% fall reduction vs. control facilities; Taiwan TAM: NT\$2.16B/year at 60,000 residents × NT\$3,000/month | Passive behavioural monitoring outperforms active vital sign monitoring for seniors | SaaS model per resident per month |
+| 22 | **Microsoft Azure + TMU Hospital** | Microsoft / Taipei Medical University Hospital | Azure IoT Hub across three campuses; 23% reduction in equipment downtime; 18% improvement in patient throughput | Operational efficiency AI is easier to sell to a hospital CFO than clinical AI | Infrastructure SaaS model; ROI measurable in weeks, not clinical trial timelines |
+| 23 | **Amazon Alexa Together** | Amazon | \$19.99/month senior monitoring via existing Echo devices; ~35% of US adults 65+ already own an Echo | Distribution asset (installed device base) eliminates CAC | Zero-CAC channel strategy; monetises existing hardware without new device sale |
+| 24 | **Google Glass failure** | Google | Launched 2013; discontinued for consumers 2015; primary reason: social stigma | Human behaviour is harder to change than code | Product-market fit requires social acceptability, not just technical capability |
+| 25 | **Google DeepMind retinal disease study** | Google DeepMind / Moorfields / Aravind | Same AI model: expert-level in London; retrained for rural India screening where specialists are scarce | Identical technology, two contexts, two business models | Appropriate tech framing: the model is the same; the commercial model must adapt to context |
+| 26 | **SafelyYou AI camera system** | SafelyYou | Computer vision detects pre-fall posture; 40% fall reduction published; privacy trade-off managed at facility level | AI prevention outperforms AI detection — but requires institutional trust | B2B institutional model; sold to operators not individuals |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: Korea Telecom (KT) and SK Telecom have both deployed AIoT senior care services at government scale, using their existing smart speaker install bases — an exact parallel to Amazon's Alexa Together strategy, but executed through a B2G channel rather than a consumer subscription. These cases also show how telecom operators can transition from connectivity providers to care service platforms — a move relevant to Taiwan's Chunghwa Telecom and its government relationships.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K6 | **KT GiGA Genie AI care service for elderly** | KT (Korea Telecom) | AI smart speaker deployed in homes of isolated seniors; bi-directional service that asks questions and records responses in a welfare monitoring system; negative speech among seniors fell from 32.98% to 8.91% within four months of launch; social workers can now prioritise home visits by checking speaker usage data, reducing unnecessary visits and increasing targeted ones; 3M GiGA Genie subscribers provide the base install | Telecom operators with smart speaker install bases can transition to welfare service providers at near-zero marginal hardware cost | B2G model: telecom sells the care monitoring service to municipal governments as a welfare contract; the smart speaker is already in the home — the service layer is the product |
+| K7 | **Naver Clova CareCall** | Naver | AI-powered conversational phone service making twice-weekly calls to isolated elderly in Busan, Seoul, and Gyeonggi Province; female AI voice inquires about daily life, nutrition, health, and mood; retains conversation context across calls; flags distress signals for human follow-up; 95% of users in Haeundae district (Busan) wished to continue after the trial period; Gyeonggi Province programme targets 2.05M seniors | AI that calls seniors rather than requiring seniors to use a device removes the digital literacy barrier entirely | B2G model: Naver provides the AI service to municipalities as a public welfare contract; no senior-facing payment, no app install, no hardware — the phone they already own is the interface |
+| K8 | **SK Telecom NUGU/Aria senior monitoring** | SK Telecom | AI speaker installed in 3,200 senior homes in Seoul's Yangcheon district and beyond; monitors seniors through daily voice interactions and inactivity detection; social workers receive app alerts when seniors do not use device for 24+ hours and then call or visit; provides cognitive quizzes to monitor memory function over time | Inactivity detection through an always-on speaker is a low-cost, high-sensitivity way to identify seniors in distress | B2G model similar to KT; deployed through local government welfare programmes; illustrates how Korea's three major telecoms (KT, SK Telecom, LG U+) are competing to become the infrastructure layer of national elder care |
+| K9 | **Seoul IoT senior home monitoring** | Seoul Metropolitan Government | Motion, temperature, humidity, and lighting sensors installed in homes of most vulnerable seniors; data monitored in real time by responsible institutions; staff dispatched automatically when no movement detected for a defined period or when environmental anomalies appear; reported as capable of detecting emergencies that would otherwise go undiscovered | Passive environmental sensor monitoring requires no senior behaviour change — the hardest adoption problem is solved by design | B2G procurement model; sensors installed at government expense; ongoing monitoring operated by social care agencies; illustrates that the payer for appropriate senior tech in Asia is frequently the municipality, not the family or the senior |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 4 — Social Pain Points: High Tech vs. Appropriate Tech {#w4}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 27 | **LINE Health+ (Taiwan and Japan)** | LINE Corporation | Health services through LINE app; 85%+ LINE penetration among Taiwanese seniors over 70 | Meet users in the channel they already trust | No app install required; distribution through existing trusted platform |
+| 28 | **M-Pesa vs. blockchain remittance** | Safaricom / various | M-Pesa: \$1 transfer serving 51M users; blockchain alternative serving 50,000 | Simpler solutions reach more people faster | Adoption rate matters more than technological sophistication |
+| 29 | **ElliQ AI companion robot** | Intuition Robotics / NY State | NY State deployment; 80% daily engagement rate; measurable loneliness reduction | Technology engagement does not automatically equal superior outcome | High-cost solution with strong engagement metrics but comparable outcome to low-cost alternatives |
+| 30 | **UK telephone befriending programme** | Royal Voluntary Service | Comparable loneliness score improvement to ElliQ; ~1% of ElliQ cost | Effectiveness must be evaluated relative to cost | Low-cost, high-reach intervention challenges the assumption that technology produces better outcomes |
+| 31 | **PARO therapeutic seal robot** | Japan AIST | 5,000+ elder care facilities globally including Taiwan and South Korea; measurable reduction in agitation and medication use among dementia patients | Purpose-designed assistive technology can achieve global scale | B2G and B2B institutional model; clinical evidence enables government procurement |
+| 32 | **ROBEAR nursing robot** | RIKEN / Japan | ~\$50M development funding; never left prototype stage; too slow, too expensive, frightening to patients | Technical feasibility is necessary but insufficient for adoption | No commercial model without adoption; adoption requires user acceptance |
+| 33 | **Microsoft RADAR-AD study** | Microsoft / Alzheimer's Research UK | Smartphone sensor data detecting cognitive decline before clinical symptoms; published via Microsoft Research portal | Passive digital biomarkers may detect disease earlier than clinical assessment | Data already generated by consumers has diagnostic value |
+| 34 | **Taiwan LTC 2.0 foreign worker dependency** | Taiwan MOHW | ~230,000 foreign care workers providing majority of home-based elder care; LTC 2.0 targeting technology to reduce this dependency | Structural labour dependency creates policy demand for technology substitution | Government is motivated buyer when facing a structural workforce problem |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: Korea's "K-elderly crisis" — one in three seniors living alone, the highest elderly suicide rate in the OECD, and a rapidly eroding tradition of multigenerational households — has generated some of the most creative and most ethically complex senior social pain point responses in the world. The Hyodol case in particular forces students to confront the tension between measurable outcomes (reduced depression, improved medication adherence) and legitimate concerns about dignity, dependency, and infantilisation — exactly the appropriate tech debate this week is designed to surface.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K10 | **Korea's "K-elderly crisis" demographics** | Korea MOHW / OECD | 1 in 3 Korean seniors lives alone (35.1% of elderly population in one-person households as of 2020); Korea has the highest elderly suicide rate among OECD countries; number of seniors living alone projected to more than double by 2035; rapid economic transformation has eroded multigenerational household norms within a single generation; the country's welfare spending was the second-lowest among OECD countries as recently as 2009 | The social pain point is structural, not incidental — rapid economic growth and cultural change outpaced welfare system development | Government urgency to solve the caregiver shortage creates a B2G market for senior tech that is larger and more immediately fundable than the B2C consumer market |
+| K11 | **Hyodol AI companion robot** | Hyodol (Aitrics Care) | \$1,800 AI companion robot designed as a cute doll for emotional and practical support; speaks with a child-like voice; provides medication reminders, dementia-prevention quizzes, and daily conversation; connected to family app and welfare monitoring platform; 12,000+ deployed across South Korea primarily through government welfare programmes; study of 69 older adults showed reduced depression and improved cognitive scores after six weeks; a 2024 study of 9,000 users showed reduced depression levels and improved medication adherence; Korean government distributed 7,000 units directly to seniors and dementia patients; ethical concerns raised about emotional dependency, infantilisation, and privacy of monitoring | Measurable clinical outcomes (reduced depression, improved medication adherence) do not resolve ethical questions about dignity and appropriate design — both dimensions must be addressed | B2G primary model (government welfare procurement); device sold at \$1,800 with connected monitoring subscription; illustrates that intentionally low-tech aesthetic design can dramatically lower adoption barriers while raising separate ethical concerns — directly comparable to PARO in Japan |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 5 — Smart Silver Economy: Designing for the 60+ {#w5}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 35 | **Microsoft Inclusive Design Toolkit** | Microsoft | Publicly available; closed captions designed for deaf users now used by 80% of viewers in noisy environments; touchscreen keyboard designed for motor impairment became standard for 6B smartphones | Designing for constraint produces better products for everyone | Accessible design is a market expansion strategy, not a cost |
+| 36 | **Japan Society 5.0 and SoftBank Pepper** | SoftBank / Japan METI | Pepper deployed in 2,000 elder care facilities; quietly withdrawn; \$300M government investment in care robotics 2013–2020 | National policy investment does not guarantee product-market fit | Government spending creates a market signal, not a guaranteed buyer |
+| 37 | **Apple Watch fall detection (Taiwan cases)** | Apple | Documented life-saving cases in Taiwan; automatically contacts emergency services after 60 seconds of immobility | A consumer device feature can function as emergency medical infrastructure | Platform model: safety feature increases Apple Watch LTV without changing device price |
+| 38 | **Lumosity and FTC settlement** | Lumosity / Lumos Labs | 150M users; \$11.99/month; 2016 FTC settlement of \$2M for claiming games prevented Alzheimer's without clinical evidence | Clinical claims require clinical evidence | Overstated health claims create regulatory liability |
+| 39 | **Linus Health digital cognitive assessment** | Linus Health | Replaces paper MMSE in primary care; 500+ clinic partners; published validation shows earlier MCI detection | Digitising existing clinical workflow is lower-friction than creating a new one | B2B2C through clinics; reimbursed as clinical service |
+| 40 | **Adora Brain Health (Taipei VGH)** | Taipei Veterans General Hospital | Tablet-based cognitive training deployed to outpatient dementia clinics in Taiwan; local clinical evidence; no commercial scaling | Hospital-developed health tech rarely scales without a dedicated commercialisation pathway | Institutional innovation requires a spinout or licensing strategy |
+| 41 | **GrandPad simplified tablet** | GrandPad | \$40/month including device, 4G data, and family app; no app store; one-tap video call; 100,000+ users; 92% monthly retention | Simplicity, not sophistication, drives adoption in the senior consumer segment | Hardware-plus-subscription model; low price compensated by very high retention |
+| 42 | **AARP AgeTech Collaborative** | AARP | 80+ companies funded; K4Connect (400+ senior living facilities); Rendever (VR for seniors with measurable depression reduction); open to international applicants | Specialised accelerators provide distribution access, not just funding | B2B2C via institutional channel; AARP brand provides credibility consumer direct marketing cannot buy |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: Seoul's 2024 Smart Senior infrastructure investment and the national rollout of government-distributed AI companion robots together constitute the most ambitious government-led silver economy product deployment in Asia. These cases give students a concrete example of what it looks like when a government decides to solve a social pain point through technology procurement at scale — and what design choices that path rewards and punishes.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K12 | **Seoul Smart Senior Places programme** | Seoul Metropolitan Government | Renovating 105 senior centres across 11 districts into "smart senior centres" with care robots offering brain development content, electronic whiteboards, smart tables for cognitive programmes, and smart home systems controlling electricity, gas, and water; two flagship "New Smart Senior Place" and "Smart Healthy Lounge" welfare centres opened in 2024; digital experience bus operating to help elderly residents with digital needs | Government-designed senior spaces as a product distribution channel — technology deployed into a physical location seniors already visit voluntarily removes the need for home installation or individual purchase | B2G procurement is not a niche — Seoul operates 105 senior centres; a product approved for this network has immediate access to the majority of the city's 1.5M+ senior residents through a trusted public institution |
+| K13 | **Samsung Galaxy Watch as Korea's senior health IoT anchor** | Samsung | Galaxy Watch health monitoring features — ECG, blood oxygen, irregular heart rhythm detection, and blood pressure via pulse wave analysis — cleared by Korean MFDS and Taiwan FDA before US FDA approval in multiple cases; blood pressure feature validated by Yonsei University Hospital in Seoul; higher market share than Apple Watch in both Korea and Taiwan; Samsung actively partnering with Korean hospitals and the NHIS on health data integration | The dominant wearable platform in Korea and Taiwan is Samsung, not Apple — a fact that changes channel strategy, API access strategy, and partnership negotiation for any startup building on wearable health data in this region | Platform partnership strategy: a health AI company building on Samsung Health data in Korea and Taiwan is starting from a larger addressable install base than one building on Apple HealthKit — and faces different regulatory and data access terms |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 6 — Business Model: Full Build and Capstone {#w6}
+
+## Global and Big Tech Cases
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 43 | **Philips HealthSuite (revisited)** | Philips | Consumer electronics divested 2021; full pivot to connected health infrastructure; canvas revisited from Week 1 with domain knowledge | Strategic clarity sometimes requires subtraction | Platform model requires focus; diversified conglomerates are disadvantaged in health AI |
+| 44 | **Omada Health** | Omada Health | \$732M raised through 2024; 500,000 members; per-member-per-month from employers and health plans; pricing depends on clinical evidence base | Clinical evidence justifies premium B2B pricing | Without RCT evidence, B2B health SaaS competes on price; with it, on ROI |
+| 45 | **Dexcom continuous glucose monitor** | Dexcom | \$3.6B revenue 2023; 85% from consumable sensors; enterprise value multiple 8× revenue vs. 2–3× for pure device companies | Recurring consumable model generates superior valuation multiple | Design the business model around the consumable, not the device |
+| 46 | **Hinge Health** | Hinge Health | \$6.2B valuation 2024; sells to self-insured employers; ~\$120 per enrolled employee vs. \$4,000 average surgical episode cost avoided | ROI-based B2B selling: product pays for itself in the first avoided surgery | Employer channel enables ROI narrative impossible in consumer or payer-direct models |
+| 47 | **Butterfly Network handheld ultrasound** | Butterfly Network | FDA-cleared; \$1.8B company value; regulatory clearance became the primary competitive barrier | Regulatory clearance is a durable moat | Invest in regulatory pathway early; the cost is a barrier to competition, not just compliance |
+| 48 | **Veracyte genomic cancer tests** | Veracyte | FDA-cleared diagnostics; 70% gross margins; competitors cannot replicate without equivalent clinical evidence | Clinical evidence creates pricing power at a level no consumer product can achieve | Evidence-based diagnostics command premium margins because the evidence is the product |
+| 49 | **Best Buy + Lively (GreatCall) acquisition** | Best Buy / Lively | Best Buy acquired Lively for \$800M in 2018; physical retail as distribution for seniors who would not find them online | Physical retail is a strategic distribution asset for senior tech, not a legacy liability | CAC through physical retail is lower than digital for senior segments |
+| 50 | **Amazon Alexa Together (unit economics)** | Amazon | \$19.99/month; zero marginal CAC via existing Echo install base | Best distribution strategy uses infrastructure that already exists | Platform leverage eliminates CAC entirely |
+| 51 | **AppWorks Taiwan senior health investment thesis** | AppWorks | Explicitly identified aging and health as priority sector 2024–2028; open application process | Local VC signals where the Taiwan market is heading | Sector-focused VC alignment improves fundraising narrative |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+## Korea Cases
+
+::: {.korea-section}
+Korea parallel: Lunit's global expansion model — generating 88% of revenue from outside Korea within three years of its KOSDAQ IPO — offers the most instructive business model case for Taiwan healthtech companies aspiring to export. Kakao Healthcare's B2C-to-B2H pivot offers the most honest cautionary tale about the difficulty of consumer health monetisation in Asia, even with a brand that 90%+ of Koreans already use daily. Together they bracket the two most common revenue strategy choices facing Taiwan health AI companies today.
+:::
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| K14 | **Lunit global expansion and dual revenue model** | Lunit | KOSDAQ listed 2022; domestic revenue only 12% of total by 2024 — 88% from overseas across 65 countries; two revenue streams: (1) hospital AI diagnostics SaaS (Lunit INSIGHT for radiology and pathology); (2) pharmaceutical AI biomarker platform (Lunit SCOPE, demand up 182% YoY); acquired Volpara Health (New Zealand) to enter breast cancer screening market with established customer base in English-speaking markets; 125 published SCI papers — the evidence base is built into the product positioning | A medical AI company that builds its regulatory clearance and clinical evidence base at home can export the model — and the evidence — globally; the first FDA clearance is the hardest, each subsequent one is faster | Dual B2B revenue model: hospital SaaS provides stable recurring revenue; pharmaceutical data licensing provides high-margin project revenue; the combination justifies a premium valuation multiple; Taiwan companies should consider which revenue stream they are actually building — the two require different sales teams, different regulatory strategies, and different customer relationships |
+| K15 | **Kakao Healthcare B2C-to-B2H pivot as a cautionary model** | Kakao Healthcare | PASTA blood glucose app launched with Dexcom and Novo Nordisk; maintained as a free platform domestically despite CGM commission revenue model; 2024 revenue KRW 23.1B (+93.5%) but operating losses widened to KRW 39.2B; management rights acquired by CHA Hospital & Bio Group in late 2025; board restructured around hospital executives in 2026; company pivoting to AI-based EHR business leveraging the hospital network of its new majority shareholder | The most powerful consumer brand in Korea — Kakao — could not monetise a health app at the consumer level; the eventual viable business model required a hospital network as the distribution and payer channel | The B2C to B2H trajectory that Kakao Healthcare followed in three years is the trajectory most consumer senior health companies will follow eventually — those that anticipate it from the start and build hospital relationships early will arrive at profitability faster than those that discover it through operating losses |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Cross-Reference Index {#xref}
+
+Cases appearing in or relevant to multiple weeks of the course. Korea cases marked with **K**.
+
+| Case | Primary Week | Also Relevant To | Connection |
+|------|-------------|-----------------|------------|
+| Livongo Health | W1 | W6 | Canvas anchor case W1; unit economics revisited W6 |
+| Philips HealthSuite | W1 | W6 | Canvas W1; strategic pivot revisited W6 |
+| Google DeepMind retinal study | W1 | W4 | AI case W1; appropriate tech case W4 |
+| Microsoft Nuance DAX | W1 | W6 | AI acquisition W1; unit economics W6 |
+| Apple Watch platform | W1 | W3, W5 | Introduced W1; AIoT architecture W3; fall detection W5 |
+| Amazon One Medical vs. Care | W1 | W6 | Build vs. buy W1; go-to-market revisited W6 |
+| Taiwan NHI data asset | W1 | W2, W6 | Data value W1; pipeline detail W2; payer context W6 |
+| Google Fitbit acquisition | W2 | W3 | Data acquisition W2; wearable hardware W3 |
+| Apple ResearchKit | W2 | W3 | Data infrastructure W2; clinical study platform W3 |
+| CarePredict | W3 | W5 | AIoT architecture W3; market sizing W5 |
+| SafelyYou | W3 | W5 | AIoT W3; fall detection landscape W5 |
+| ElliQ vs. telephone befriending | W4 | W5 | Appropriate tech W4; senior product design W5 |
+| PARO vs. ROBEAR | W4 | W5 | Japan W4; design principles W5 |
+| LINE Health+ | W4 | W5 | Channel strategy W4; distribution model W5 |
+| Taiwan LTC 2.0 programme | W4 | W6 | Pain point context W4; distribution channel W6 |
+| GrandPad | W5 | W6 | Product design W5; unit economics and retention W6 |
+| Dexcom | W3 | W6 | Hardware IoT W3; consumable model valuation W6 |
+| Microsoft Inclusive Design | W5 | W4 | Design principles W5; appropriate tech framing W4 |
+| **K — Lunit** | W1 | W6 | AI medical imaging company W1; global revenue model W6 |
+| **K — VUNO DeepCARS** | W1 | W3 | AI clinical decision support W1; AIoT monitoring W3 |
+| **K — Kakao Healthcare** | W1 | W2, W6 | AI healthcare company W1; federated learning W2; B2C-to-B2H pivot W6 |
+| **K — Korea NHIS data** | W2 | W1 | Direct parallel to Taiwan NHI introduced W1; data governance W2 |
+| **K — KT GiGA Genie** | W3 | W4, W6 | AIoT senior monitoring W3; social isolation W4; B2G model W6 |
+| **K — Naver Clova CareCall** | W3 | W4 | AIoT voice interface W3; social isolation appropriate tech W4 |
+| **K — Hyodol companion robot** | W4 | W5 | Social pain points W4; inclusive design ethics W5 |
+| **K — Seoul Smart Senior Places** | W5 | W6 | Senior product design W5; government channel B2G W6 |
+| **K — Samsung Galaxy Watch** | W3 | W5 | AIoT health device W3; dominant regional wearable platform W5 |
+
+: {tbl-colwidths="[25,15,20,40]"}
+
+---
+
+# Summary Statistics {.unnumbered}
+
+| Dimension | Original | Korea Added | Total |
+|-----------|---------|-------------|-------|
+| Total case studies | 51 | 15 | **66** |
+| Big tech company cases (Google, Microsoft, Apple, Amazon) | 22 | 0 | 22 |
+| Korea-specific cases | 2* | 13 | **15** |
+| Taiwan-specific cases | 9 | 0 | 9 |
+| Japan / other Asia-Pacific cases | 6 | 0 | 6 |
+| Failed or cautionary cases | 10 | 2 | **12** |
+| Cases with published quantitative outcomes | 31 | 11 | **42** |
+| Cases available via public sources (no paywall) | 44 | 13 | **57** |
+| Cases spanning multiple weeks | 18 | 9 | **27** |
+
+: *Samsung Galaxy Watch (Case 20) was originally included as a Korea/Taiwan regulatory case in the main plan and has been expanded into a dedicated Korea case in this revision.
+
+## Why Korea Matters for This Course
+
+Korea's relevance to Taiwan MBA students is not geographic proximity alone. It is structural similarity. Both countries became or are becoming super-aged societies within the same decade. Both have single-payer national health insurance systems generating comparable research-grade data assets. Both have governments deploying significant public capital to solve the same three problems — social isolation, falls, and dementia. Both have domestic medical AI companies navigating the same path from local regulatory clearance to FDA approval.
+
+The most important difference is that Korea is approximately five years ahead of Taiwan on several dimensions: its medical AI sector is further along the commercialisation curve (Lunit's global revenue model, VUNO's path to profitability), its telecom operators have already deployed senior care services at government scale (KT, SK Telecom, Naver), and its government has already learned what works in senior robot deployment (Hyodol yes, ROBEAR no) through a decade of public investment. Taiwan MBA students who study the Korea cases carefully are, in effect, looking at their own market's near future.
+
+::: {.callout-tip}
+## For Instructors: Keeping Korea Cases Current
+Korea's medical AI sector is moving faster than any other in the region — MFDS approvals grew from 62 in 2023 to 157 in 2025. Revenue figures for Lunit, VUNO, and Kakao Healthcare should be verified against the most recent quarterly disclosures before each cohort. All three companies publish English-language investor relations materials. The government welfare programme statistics (Hyodol deployments, Seoul smart centre rollouts) are available through Korea MOHW and Seoul Metropolitan Government English-language press releases.
+:::
+
+---
+
+*Reference document compiled for internal academic use. All case data sourced from publicly available financial disclosures, published academic studies, government statistical databases, and company investor relations materials. No proprietary datasets were used in the preparation of this document.*

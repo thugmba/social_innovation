@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Innovation: From Cross-Cultural Communication to Smart Practice</title>
+  <link rel="stylesheet" href="si_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="si_files/libs/revealjs/dist/reveal.css">
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --ink: #16324f;
+      --muted: #65788f;
+      --accent: #0f5b99;
+      --accent-2: #2d7dbf;
+      --line: #d9e2ec;
+      --card: rgba(255, 255, 255, 0.96);
+      --soft: #eaf1f7;
+      --shadow: 0 18px 44px rgba(20, 50, 79, 0.08);
+    }
+
+    html,
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(15, 91, 153, 0.08), rgba(15, 91, 153, 0) 16%),
+        var(--bg);
+      color: var(--ink);
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .reveal {
+      font-size: 32px;
+      font-weight: 400;
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      box-sizing: border-box;
+      height: 100%;
+      padding: 34px 46px;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3 {
+      margin: 0;
+      letter-spacing: -0.03em;
+      text-transform: none;
+      color: var(--ink);
+    }
+
+    .reveal h1 {
+      font-size: 2.25em;
+      line-height: 1.02;
+    }
+
+    .reveal h2 {
+      font-size: 1.34em;
+      margin-bottom: 10px;
+    }
+
+    .reveal h3 {
+      font-size: 0.52em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .reveal p,
+    .reveal li {
+      font-size: 0.62em;
+      line-height: 1.42;
+      color: #294766;
+    }
+
+    .reveal ul {
+      margin: 0.3em 0 0 1.05em;
+    }
+
+    .reveal li {
+      margin: 0.28em 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border: 1px solid rgba(15, 91, 153, 0.18);
+      border-radius: 999px;
+      color: var(--accent);
+      font-size: 0.38em;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      background: rgba(15, 91, 153, 0.06);
+    }
+
+    .hero-layout,
+    .course-grid,
+    .week-shell,
+    .week-grid,
+    .assessment-grid,
+    .summary-grid {
+      display: grid;
+      gap: 22px;
+    }
+
+    .hero-layout {
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: stretch;
+    }
+
+    .week-shell,
+    .week-grid,
+    .assessment-grid {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .summary-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 18px;
+    }
+
+    .card,
+    .metric,
+    .image-card,
+    .week-panel {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .card {
+      padding: 20px 22px;
+    }
+
+    .lead {
+      font-size: 0.8em;
+      line-height: 1.34;
+      color: var(--ink);
+      max-width: 14em;
+      margin: 14px 0 18px;
+    }
+
+    .sublead {
+      color: var(--muted);
+      font-size: 0.54em;
+      line-height: 1.42;
+      max-width: 30em;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    .pill {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      font-size: 0.44em;
+      letter-spacing: 0.04em;
+    }
+
+    .metric {
+      padding: 16px 18px;
+      min-height: 118px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.04em;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+
+    .metric span {
+      display: block;
+      font-size: 0.52em;
+      color: var(--muted);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .metric p {
+      font-size: 0.54em;
+      margin: 0;
+    }
+
+    .image-stack {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      align-content: center;
+      height: 100%;
+    }
+
+    .image-card {
+      padding: 12px;
+      position: relative;
+      overflow: hidden;
+      min-height: 168px;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      display: block;
+      filter: drop-shadow(0 6px 14px rgba(20, 50, 79, 0.16));
+    }
+
+    .image-card .caption {
+      margin-top: 8px;
+      font-size: 0.42em;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .course-grid,
+    .week-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .week-panel {
+      padding: 18px 18px 16px;
+      min-height: 192px;
+    }
+
+    .week-panel h4,
+    .assessment-card h4 {
+      margin: 0 0 10px;
+      font-size: 0.58em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .week-panel strong {
+      display: block;
+      font-size: 0.94em;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .week-panel p {
+      margin: 0;
+      font-size: 0.54em;
+      color: var(--muted);
+    }
+
+    .week-panel ul {
+      margin: 0;
+      padding-left: 1.05em;
+    }
+
+    .week-panel li {
+      font-size: 0.54em;
+      color: #294766;
+      margin: 0.32em 0;
+    }
+
+    .week-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .week-kicker {
+      font-size: 0.5em;
+      color: var(--muted);
+      max-width: 22em;
+      line-height: 1.35;
+    }
+
+    .assessment-grid {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 12px;
+    }
+
+    .assessment-card {
+      padding: 18px 20px;
+      border-radius: 12px;
+      background: var(--card);
+      border: 1px solid var(--line);
+    }
+
+    .assessment-card strong {
+      color: var(--accent);
+    }
+
+    .footer-note {
+      margin-top: 18px;
+      font-size: 0.5em;
+      color: var(--muted);
+      line-height: 1.4;
+      max-width: 60em;
+    }
+
+    .section-rule {
+      width: 68px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 999px;
+      margin: 14px 0 18px;
+    }
+
+    .reveal .progress {
+      color: var(--accent);
+      height: 4px;
+    }
+
+    .reveal .controls {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <div class="hero-layout">
+          <div>
+            <div class="eyebrow">MBA Graduate Course</div>
+            <h1>Social Innovation:<br>From Cross-Cultural Communication to Smart Practice</h1>
+            <div class="section-rule"></div>
+            <p class="lead fragment fade-up" data-fragment-index="1">
+              A strategy course linking AI, management, and social innovation.
+            </p>
+            <p class="sublead fragment fade-up" data-fragment-index="2">
+              AI is treated as an adoption, governance, and market-design problem rather than a technical implementation topic.
+            </p>
+            <div class="meta-row fragment fade-up" data-fragment-index="3">
+              <span class="pill">6 Weeks</span>
+              <span class="pill">3 Hours / Week</span>
+              <span class="pill">18 Contact Hours</span>
+            </div>
+          </div>
+          <div class="image-stack">
+            <div class="image-card fragment fade-left" data-fragment-index="1">
+              <img src="assets/IBM_Watson_Health.png" alt="IBM Watson Health">
+              <div class="caption">Strategic overreach and failed adoption</div>
+            </div>
+            <div class="image-card fragment fade-left" data-fragment-index="2">
+              <img src="assets/FDA.png" alt="FDA">
+              <div class="caption">Regulation, approval pathways, liability</div>
+            </div>
+            <div class="image-card fragment fade-left" data-fragment-index="2">
+              <img src="assets/MD_Anderson_Cancer_Center.png" alt="MD Anderson Cancer Center">
+              <div class="caption">Pilot risk and workflow mismatch</div>
+            </div>
+            <div class="image-card fragment fade-left" data-fragment-index="3">
+              <img src="assets/Truven_Health_Analytics.png" alt="Truven Health Analytics">
+              <div class="caption">Data acquisitions and capability economics</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Course Architecture</h3>
+        <h2>From healthcare strategy to the smart silver economy</h2>
+        <div class="section-rule"></div>
+        <div class="course-grid">
+          <div class="metric fragment fade-up" data-fragment-index="1">
+            <span>Week 1</span>
+            <strong>AI Strategy in Healthcare</strong>
+            <p>Build vs buy and failed scale-up.</p>
+          </div>
+          <div class="metric fragment fade-up" data-fragment-index="2">
+            <span>Week 2</span>
+            <strong>AI in the Medical Sector</strong>
+            <p>Regulation, partnerships, value chain.</p>
+          </div>
+          <div class="metric fragment fade-up" data-fragment-index="3">
+            <span>Week 3</span>
+            <strong>Data as Strategic Asset</strong>
+            <p>Governance, platforms, trapped value.</p>
+          </div>
+          <div class="metric fragment fade-up" data-fragment-index="4">
+            <span>Week 4</span>
+            <strong>AI &amp; IoT Operations</strong>
+            <p>Connected infrastructure and scale economics.</p>
+          </div>
+          <div class="metric fragment fade-up" data-fragment-index="5">
+            <span>Week 5</span>
+            <strong>AI for Social Impact</strong>
+            <p>Public deployment, bias, accountability.</p>
+          </div>
+          <div class="metric fragment fade-up" data-fragment-index="6">
+            <span>Week 6</span>
+            <strong>Smart Silver Economy</strong>
+            <p>Longevity market and capstone design.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 1</h3>
+              <h2>AI Strategy in Healthcare</h2>
+            </div>
+            <div class="week-kicker">Strategic question: when does AI become a source of lock-in rather than advantage?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>Adoption is a strategic decision</strong>
+            <p>Students test AI investment logic at board and business-unit level.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Build vs buy</li>
+              <li>Vendor dependence</li>
+              <li>ROI framing</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Disruptive Innovation</li>
+              <li>Technology Acceptance Model</li>
+              <li>Resource-Based View</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="image-card fragment fade-up" data-fragment-index="4">
+            <img src="assets/IBM_Watson_Health.png" alt="IBM Watson Health">
+            <div class="caption">Anchor case: Watson Health</div>
+          </div>
+          <div class="image-card fragment fade-up" data-fragment-index="4">
+            <img src="assets/MD_Anderson_Cancer_Center.png" alt="MD Anderson Cancer Center">
+            <div class="caption">Failed oncology pilot</div>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Case Signal</h4>
+            <strong>$4B in acquisitions, sold near $1B</strong>
+            <p>The gap frames strategic overreach and poor adoption fit.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 2</h3>
+              <h2>AI in the Medical Sector</h2>
+            </div>
+            <div class="week-kicker">Strategic question: how do firms compete when regulation shapes speed, liability, and entry?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>Healthcare AI is a regulated market game</strong>
+            <p>Execution depends on approvals, partnership design, and governance choices.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Market entry timing</li>
+              <li>Partnership vs integration</li>
+              <li>Liability allocation</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Porter's Value Chain</li>
+              <li>Institutional Theory</li>
+              <li>Transaction Cost Economics</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="image-card fragment fade-up" data-fragment-index="4">
+            <img src="assets/FDA.png" alt="FDA logo">
+            <div class="caption">Approval pathways and compliance logic</div>
+          </div>
+          <div class="image-card fragment fade-up" data-fragment-index="4">
+            <img src="assets/Merge_Healthcare.png" alt="Merge Healthcare">
+            <div class="caption">Partnerships and infrastructure bets</div>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Case Signal</h4>
+            <strong>Radiology leads because data and workflow are standardised</strong>
+            <p>Students map where disruption and margin capture are most likely.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 3</h3>
+              <h2>AI &amp; Data as Strategic Assets</h2>
+            </div>
+            <div class="week-kicker">Strategic question: how does proprietary data become a defensible moat?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>Data quality and governance shape AI value</strong>
+            <p>Students assess where monetisation and readiness break down.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Governance vs speed</li>
+              <li>Monetisation vs compliance</li>
+              <li>Platform scale vs data silos</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Dynamic Capabilities</li>
+              <li>Platform Economics</li>
+              <li>Information Asymmetry</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Strategic Question</h4>
+            <strong>What value stays trapped in silos?</strong>
+            <p>Students identify where data governance unlocks competitive advantage.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Market Logic</h4>
+            <strong>AI amplifies the value of proprietary data</strong>
+            <p>Platforms capture more value when both sides reinforce training quality.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Managerial Output</h4>
+            <strong>Readiness diagnosis</strong>
+            <p>Students judge whether firms can renew data advantage over time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 4</h3>
+              <h2>AI &amp; IoT Operations</h2>
+            </div>
+            <div class="week-kicker">Strategic question: when does connected infrastructure create real operating leverage?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>AI-IoT is an operating model choice</strong>
+            <p>Students analyze capital allocation, scalability, and ecosystem coordination.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Efficiency vs complexity</li>
+              <li>Scale vs interoperability</li>
+              <li>Automation vs process redesign</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Ecosystem Theory</li>
+              <li>Diffusion of Innovations</li>
+              <li>Lean Operations</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Infrastructure Lens</h4>
+            <strong>Connected systems rarely win alone</strong>
+            <p>Success depends on co-evolving device, platform, and service partners.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Adoption Lens</h4>
+            <strong>Early adopters move years ahead</strong>
+            <p>Students explain where smart factories and connected health scale first.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Managerial Output</h4>
+            <strong>Investment prioritisation</strong>
+            <p>Students test whether AI-IoT reduces waste or automates flawed workflows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 5</h3>
+              <h2>AI for Social Impact</h2>
+            </div>
+            <div class="week-kicker">Strategic question: when is AI the right intervention for public and social problems?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>The unit of analysis shifts from firm to society</strong>
+            <p>Students evaluate legitimacy, bias, and measurable social return.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Innovation vs accountability</li>
+              <li>High-tech vs appropriate tech</li>
+              <li>Efficiency vs equity</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Stakeholder Theory</li>
+              <li>Appropriate Technology</li>
+              <li>Triple Bottom Line</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Application Areas</h4>
+            <strong>Welfare, education, justice</strong>
+            <p>Students compare gains in risk mitigation against unintended consequences.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Decision Test</h4>
+            <strong>Is AI genuinely the best solution?</strong>
+            <p>The course forces comparison with lower-cost community-centered alternatives.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Managerial Output</h4>
+            <strong>Social ROI assessment</strong>
+            <p>Students judge whether impact claims are financially and ethically defensible.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="week-shell">
+          <div class="week-topline">
+            <div>
+              <h3>Week 6</h3>
+              <h2>Smart Silver Economy Business Model</h2>
+            </div>
+            <div class="week-kicker">Strategic question: how do firms build for older adults as a market, not a welfare category?</div>
+          </div>
+          <div class="section-rule"></div>
+        </div>
+        <div class="week-grid">
+          <div class="week-panel fragment fade-up" data-fragment-index="1">
+            <h4>Management Focus</h4>
+            <strong>The course ends with a capstone design exercise</strong>
+            <p>Students build AI-enabled business models for the longevity economy.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="2">
+            <h4>Key Tensions</h4>
+            <ul>
+              <li>Welfare framing vs market framing</li>
+              <li>Need-based design vs value proposition</li>
+              <li>Scale opportunity vs affordability</li>
+            </ul>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="3">
+            <h4>Theory Lens</h4>
+            <ul>
+              <li>Business Model Canvas</li>
+              <li>Blue Ocean Strategy</li>
+              <li>Base of the Pyramid</li>
+            </ul>
+          </div>
+        </div>
+        <div class="summary-grid" style="margin-top:18px;">
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Market View</h4>
+            <strong>The longevity economy is a growth market</strong>
+            <p>Students identify under-served segments and new value spaces.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="4">
+            <h4>Design Output</h4>
+            <strong>Business model stress test</strong>
+            <p>Teams define customers, channels, partners, and revenue logic.</p>
+          </div>
+          <div class="week-panel fragment fade-up" data-fragment-index="5">
+            <h4>Capstone Outcome</h4>
+            <strong>Commercially plausible, socially defensible venture ideas</strong>
+            <p>The course closes with project presentations and challenge.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Assessment</h3>
+        <h2>How students are evaluated</h2>
+        <div class="section-rule"></div>
+        <div class="assessment-grid">
+          <div class="assessment-card fragment fade-up" data-fragment-index="1">
+            <h4>Weekly response papers</h4>
+            <p><strong>30%</strong> · 500 words per week, submitted before class.</p>
+          </div>
+          <div class="assessment-card fragment fade-up" data-fragment-index="2">
+            <h4>Case discussion participation</h4>
+            <p><strong>20%</strong> · Contribution quality during each in-class session.</p>
+          </div>
+          <div class="assessment-card fragment fade-up" data-fragment-index="3">
+            <h4>Mid-course stakeholder analysis</h4>
+            <p><strong>20%</strong> · Due at the end of Week 3.</p>
+          </div>
+          <div class="assessment-card fragment fade-up" data-fragment-index="4">
+            <h4>Final business model presentation</h4>
+            <p><strong>30%</strong> · Week 6 presentation with 15 minutes plus Q&amp;A.</p>
+          </div>
+        </div>
+        <p class="footer-note fragment fade-up" data-fragment-index="5">
+          Each week pairs one strategic management question with adjacent lenses from economics, sociology, or operations.
+        </p>
+      </section>
+    </div>
+  </div>
+
+  <script src="si_files/libs/revealjs/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1600,
+      height: 900,
+      margin: 0.04,
+      hash: true,
+      controls: true,
+      progress: true,
+      center: false,
+      transition: "slide",
+      backgroundTransition: "fade",
+      autoAnimate: true,
+      autoAnimateEasing: "ease-out",
+      autoAnimateDuration: 0.8
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+---
+title: "Smart Silver Economy — Case Study Reference Table"
+subtitle: "All cases referenced across the six-week MBA lecture plan"
+author: "Global MBA Program — Taiwan Campus"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-title: "Contents"
+    toc-location: left
+    theme: cosmo
+    highlight-style: github
+    self-contained: true
+    smooth-scroll: true
+    page-layout: full
+    css: |
+      body { font-size: 0.95rem; line-height: 1.7; }
+      h1 { color: #2c3e50; border-bottom: 2px solid #2c3e50; padding-bottom: 0.3em; }
+      h2 { color: #34495e; border-bottom: 1px solid #bdc3c7; padding-bottom: 0.2em; margin-top: 2em; }
+      table { font-size: 0.88rem; }
+      thead { background-color: #f4f6f7; }
+      .tag { display: inline-block; padding: 1px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 500; white-space: nowrap; }
+      .w1 { background:#dbeafe; color:#1e3a5f; }
+      .w2 { background:#dcfce7; color:#14532d; }
+      .w3 { background:#fef9c3; color:#713f12; }
+      .w4 { background:#fce7f3; color:#831843; }
+      .w5 { background:#ede9fe; color:#3b0764; }
+      .w6 { background:#ffedd5; color:#7c2d12; }
+      .google  { background:#fef2f2; color:#991b1b; }
+      .microsoft { background:#eff6ff; color:#1e40af; }
+      .apple   { background:#f0fdf4; color:#166534; }
+      .amazon  { background:#fffbeb; color:#92400e; }
+      .taiwan  { background:#f5f3ff; color:#4c1d95; }
+      .startup { background:#f0fdfa; color:#134e4a; }
+      .govt    { background:#fdf4ff; color:#6b21a8; }
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    colorlinks: true
+    geometry: margin=2cm
+    fontsize: 10pt
+    linestretch: 1.4
+    keep-tex: false
+execute:
+  echo: false
+  warning: false
+---
+
+
+# How to Use This Table {.unnumbered}
+
+This reference document compiles all **`r 38`** case studies cited across the six-week Smart Silver Economy lecture plan. Cases are grouped by primary topic area and cross-referenced to the week and hour in which they appear. Each entry identifies the company or organisation, the core facts used in class, the key teaching point, and the primary business model lesson it illustrates.
+
+Instructors may use this table to:
+
+- Quickly locate a case when preparing a specific session
+- Identify cases that span multiple weeks (marked in the cross-reference column)
+- Select substitute cases of a similar type if a particular example becomes outdated
+- Brief guest panellists on the cases students have already encountered before the Week 6 pitch
+
+---
+
+# Week 1 — AI in Healthcare & Business Model Primer {#w1}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 1 | **Theranos collapse** | Theranos | Raised \$700M+; founder convicted of fraud; product never worked as claimed | Compelling vision without an operational model is not a business | Value proposition must be grounded in reality; clinical validation is not optional |
+| 2 | **Livongo Health acquisition** | Livongo / Teladoc | Acquired for \$18.5B in 2020; served employed adults with Type 2 diabetes; payer was self-insured employer, not patient | Separating the user from the payer is a structural decision, not an afterthought | Per-member-per-month employer model; value is measured improvement, not device ownership |
+| 3 | **Philips HealthSuite** | Philips | Hardware company repositioned as a health data platform; divested consumer electronics in 2021 to focus on connected health | Strategic pivots at scale are possible and sometimes necessary | Platform model replaces product model; recurring data services outvalue one-time hardware sales |
+| 4 | **Google Med-PaLM 2** | Google / DeepMind | 2023 *Nature Medicine* paper: expert-level USMLE performance; Mayo Clinic physicians found answers less actionable in real clinical use | Benchmark performance ≠ clinical utility | AI capability without workflow integration has limited commercial value |
+| 5 | **Google Health restructure** | Google | Folded Google Health into DeepMind in 2023 after years of independent operation and \$1.6B in written-down losses | Even \$100B companies can fail to find a viable health strategy | Market entry strategy must account for clinical complexity, not just technical capability |
+| 6 | **Microsoft + Nuance DAX** | Microsoft / Nuance | \$19.7B acquisition in 2021; DAX saves physicians ~3 hours/day on documentation; CGMH and NTUH piloted ambient documentation in Taiwan | Workflow integration is more valuable than raw AI capability | B2B enterprise SaaS model; ROI framed as physician time recovered, not clinical outcome |
+| 7 | **Apple Watch health platform** | Apple | ECG/AFib cleared by FDA 2018; fall detection 2018; HEARTLINE study with J&J enrolled 150,000; ResearchKit open-sourced globally | Regulatory clearance built incrementally over years, not announced as a single product | Platform differentiation model; health features increase device LTV without positioning Apple as a medical company |
+| 8 | **Amazon One Medical** | Amazon | \$3.9B acquisition 2023; 188 clinics; 767,000 patient records; integrates with Amazon Pharmacy, Quest, Alexa | Primary care as the anchor of a health platform flywheel | Acquisition of proven model vs. building from scratch; each asset amplifies the others |
+| 9 | **Amazon Care shutdown** | Amazon | Built from scratch; shut down 2022 after three years of operation | Building a healthcare business differs fundamentally from acquiring one that already works | Organic build fails without clinical trust infrastructure that takes years to earn |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 2 — Big Data {#w2}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 10 | **Google + Mayo Clinic 10-year partnership** | Google / Mayo Clinic | Google Cloud became Mayo's primary cloud provider; access to 130 years of patient records; revenue sharing arrangement | Health data is an asset that can be licensed, not just used internally | Data access deals are as strategic as product acquisitions |
+| 11 | **Microsoft + Epic integration** | Microsoft / Epic | Azure OpenAI embedded inside Epic's clinical workflow; used by 250M patients; B2B2B distribution structure | Embedding AI in existing clinical workflow is more effective than replacing it | B2B2B model: Microsoft → Epic → Hospital; margin capture occurs at the integration layer |
+| 12 | **Apple ResearchKit (open source)** | Apple | Free infrastructure enabling health studies in Taiwan, Japan, South Korea; Heart, Women's Health, and Hearing Studies each enrolled 100,000+ participants | Making infrastructure free builds data network effects and regulatory goodwill | Ecosystem strategy: give away the platform, retain the relationship with 1B+ device owners |
+| 13 | **AWS HealthLake** | Amazon | Ingests unstructured health data; normalises to FHIR; enables natural language querying; pricing publicly available | Cloud infrastructure is the substrate beneath most health AI products | Infrastructure-as-a-service model; raises cross-border data residency questions under Taiwan's PDPA |
+| 14 | **Google Fitbit acquisition** | Google | \$2.1B acquisition 2021; 18-month EU regulatory review; EU conditions restrict use of Fitbit data for advertising; multiple product lines discontinued | Regulatory conditions on acquisitions can neutralise the strategic rationale | Acquisition value depends on what you are legally permitted to do with the acquired asset |
+| 15 | **Optum algorithmic bias (2019 *Science* paper)** | Optum / UnitedHealth | Algorithm used cost as proxy for need; systematically under-served Black patients; algorithm had to be redesigned after publication | Training data reflects historical inequity; AI reproduces it at scale | Biased models create legal, reputational, and regulatory risk that compounds commercial risk |
+| 16 | **Apple differential privacy** | Apple | Aggregate health patterns learned from hundreds of millions of devices without individual data leaving the device; published on Apple ML Research Blog | Privacy-preserving AI is commercially viable at consumer scale | Privacy architecture enables regulatory compliance without sacrificing model quality |
+| 17 | **Microsoft federated learning in healthcare** | Microsoft | Models trained across multiple hospitals without sharing raw patient records; published research available publicly | Cross-institutional AI training is possible without centralised data | Federated approach may be the only legally viable cross-hospital AI training method under Taiwan's PDPA |
+| 18 | **Taiwan NHI data asset** | Taiwan MOHW / NHIA | 23M covered lives; 35 years of continuous data; 14 outpatient visits per person per year (highest globally); multiple *Nature* and *Lancet* citations from NTU and Academia Sinica | One of the world's most valuable health datasets is publicly funded and under-commercialised | Public data asset with no current commercial capture mechanism — a policy and business opportunity |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 3 — IoT and AIoT {#w3}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 19 | **Apple Heart Study** | Apple / Stanford | 419,000 participants enrolled via Apple Watch app; largest cardiovascular study in history by enrolment; 84% positive predictive value for AFib notification; clinical outcome improvement inconclusive | Regulatory positioning and clinical evidence are distinct goals | \$50M study investment yielded regulatory moat, not clinical outcome proof — both have commercial value |
+| 20 | **Samsung Health Monitor (Korea / Taiwan)** | Samsung | Galaxy Watch blood pressure feature cleared in South Korea and Taiwan before US FDA approval; validated by Yonsei University Hospital | Asia-Pacific as a regulatory testbed for health IoT | First-mover regulatory clearance in key markets creates distribution advantage before US entry |
+| 21 | **CarePredict AIoT system** | CarePredict | Wrist-worn device for assisted living seniors; detects activity pattern changes, not vital signs; predicts health events 4–5 days in advance; 77% reduction in falls vs. control facilities | Passive behavioural monitoring outperforms active vital sign monitoring for senior populations | SaaS model per resident per month; Taiwan TAM calculation: NT\$2.16B/year at 60,000 residents × NT\$3,000/month |
+| 22 | **Microsoft Azure + TMU Hospital** | Microsoft / Taipei Medical University Hospital | Azure IoT Hub monitoring medical equipment across three hospital campuses; 23% reduction in equipment downtime; 18% improvement in patient throughput; published Microsoft case study | Operational efficiency AI is easier to sell to a hospital CFO than clinical AI | Infrastructure SaaS model; ROI is measurable in weeks, not clinical trial timelines |
+| 23 | **Amazon Alexa Together** | Amazon | \$19.99/month senior monitoring subscription via existing Echo devices; fall detection through built-in motion sensors; ~35% of US adults 65+ already own an Echo | Distribution asset (installed device base) eliminates customer acquisition cost | Zero-CAC channel strategy; monetises existing hardware without new device sale |
+| 24 | **Google Glass failure** | Google | Launched 2013 as revolutionary wearable; discontinued for consumers 2015; primary reason: social stigma of wearing a visible camera in public | Human behaviour is harder to change than code | Product-market fit requires social acceptability, not just technical capability |
+| 25 | **Google DeepMind retinal disease study** | Google DeepMind / Moorfields / Aravind | Same AI model: consultant-level performance in London; retrained for diabetic retinopathy screening in rural India where specialists are scarce | Identical technology, two deployment contexts, two business models | Appropriate tech framing: the technology is the same; the commercial and social model must adapt to context |
+| 26 | **SafelyYou AI camera system** | SafelyYou | Computer vision in memory care units detects pre-fall posture changes; alerts staff before fall occurs; 40% fall reduction published; privacy trade-off for residents | AI prevention outperforms AI detection — but requires institutional trust | B2B institutional model; sold to facility operators, not individuals; privacy consent managed by facility |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 4 — Social Pain Points: High Tech vs. Appropriate Tech {#w4}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 27 | **LINE Health+ (Taiwan and Japan)** | LINE Corporation | Health consultations, medication reminders, chronic disease management delivered through the LINE app; 85%+ LINE penetration among Taiwanese seniors over 70 | Meet users in the channel they already trust | Distribution through existing trusted platform eliminates onboarding friction; no app install required |
+| 28 | **M-Pesa vs. blockchain remittance** | Safaricom / various | M-Pesa: \$1 mobile money transfer serving 51M users in Kenya; blockchain-based alternative serving 50,000 | Simpler solutions reach more people faster | Willingness to pay and adoption rate matter more than technological sophistication |
+| 29 | **ElliQ AI companion robot** | Intuition Robotics / NY State | Deployed by New York State Office for the Aging; 80% daily engagement rate; measurable loneliness score reduction | Technology engagement does not automatically equal superior outcome | High-cost solution with strong engagement metrics — but comparable outcomes to low-cost alternatives |
+| 30 | **UK telephone befriending programme** | Royal Voluntary Service | Trained volunteers make weekly calls to isolated seniors; comparable loneliness score improvement to ElliQ; approximately 1% of ElliQ cost | Effectiveness must be evaluated relative to cost, not just absolute | Low-cost, high-reach intervention challenges the assumption that technology produces better outcomes |
+| 31 | **PARO therapeutic seal robot** | Japan AIST | Developed by Japan's National Institute of Advanced Industrial Science and Technology; deployed in 5,000 elder care facilities globally including Taiwan and South Korea; measurable reduction in agitation and medication use among dementia patients | Purpose-designed assistive technology can achieve global scale | B2G and B2B institutional model; clinical evidence enables government procurement |
+| 32 | **ROBEAR nursing robot** | RIKEN / Japan | Designed to lift patients from bed to wheelchair; ~\$50M in development funding; never left the prototype stage; too slow, too expensive, frightening to patients | Technical feasibility is necessary but insufficient for adoption | No commercial model without adoption; adoption requires user acceptance, not just clinical need |
+| 33 | **Microsoft RADAR-AD study** | Microsoft / Alzheimer's Research UK | Smartphone sensor data (GPS, typing speed, app usage) used to detect cognitive decline before clinical symptoms; published results publicly available via Microsoft Research portal | Passive digital biomarkers may detect disease earlier than clinical assessment | Data already generated by consumers has diagnostic value — raises questions of consent and ownership |
+| 34 | **Taiwan LTC 2.0 foreign worker dependency** | Taiwan MOHW | ~230,000 foreign care workers (Indonesia, Vietnam) providing majority of home-based elder care; Long-Term Care 2.0 targeting technology to reduce this dependency | Structural labour dependency creates policy demand for technology substitution | Government is motivated buyer when facing a structural workforce problem; creates B2G market |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 5 — Smart Silver Economy: Designing for the 60+ {#w5}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 35 | **Microsoft Inclusive Design Toolkit** | Microsoft | Publicly available at microsoft.com/design/inclusive; closed captions (designed for deaf users) now used by 80% of viewers in noisy environments; touchscreen keyboard designed for motor impairment became standard for 6B smartphones | Designing for constraint produces better products for everyone | Accessible design is not a cost — it is a market expansion strategy |
+| 36 | **Japan Society 5.0 and SoftBank Pepper** | SoftBank / Japan METI | Pepper robot deployed in 2,000 elder care facilities; quietly withdrawn; Japan invested \$300M in care robotics 2013–2020; METI's Society 5.0 framework explicitly targets AI for elder care | National policy investment does not guarantee product-market fit | Government spending creates a market signal, not a guaranteed buyer; products must still earn adoption |
+| 37 | **Apple Watch fall detection (Taiwan cases)** | Apple | Fall detection (Series 4+) has documented life-saving cases in Taiwan when seniors fell alone at home; automatically contacts emergency services after 60 seconds of immobility post-detected fall | A feature embedded in a consumer device can function as emergency medical infrastructure | Platform model: safety feature increases Apple Watch perceived value without changing device price |
+| 38 | **Lumosity and FTC settlement** | Lumosity / Lumos Labs | 150M registered users; freemium at \$11.99/month; 2016 FTC settlement of \$2M for claiming games prevented Alzheimer's without clinical evidence | Clinical claims require clinical evidence; regulatory enforcement is a business risk | Overstated health claims create FTC / FDA / NCC liability that can exceed the marketing benefit |
+| 39 | **Linus Health digital cognitive assessment** | Linus Health | Replaces paper MMSE in primary care; partnered with 500+ clinics in North America; published validation shows earlier MCI detection than standard clinical assessment | Digitising an existing clinical workflow is a lower-friction market entry than creating a new one | B2B2C model through clinics; reimbursed as a clinical service rather than sold as a consumer product |
+| 40 | **Adora Brain Health (Taipei VGH)** | Taipei Veterans General Hospital | Tablet-based cognitive training and monitoring developed in-house; deployed to outpatient dementia clinics; Taiwan-local clinical evidence; no commercial scaling | Hospital-developed health tech rarely scales commercially without a dedicated commercialisation pathway | Institutional innovation requires a spinout or licensing strategy to capture commercial value |
+| 41 | **GrandPad simplified tablet** | GrandPad | \$40/month including device, 4G data, and family app; no app store, no settings, one-tap video call; 100,000+ active users; 92% monthly retention — among highest in consumer tech | Simplicity, not sophistication, drives adoption in the senior consumer segment | Hardware-plus-subscription model; low price point compensated by very high retention and low churn |
+| 42 | **AARP AgeTech Collaborative** | AARP | Startup accelerator for senior tech; 80+ companies funded including K4Connect (400+ senior living facilities) and Rendever (VR for mobility-limited seniors with measurable depression reduction); open to international applicants | Specialised accelerators provide distribution access, not just funding | B2B2C via institutional channel; AARP brand provides credibility that consumer direct marketing cannot buy |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Week 6 — Business Model: Full Build and Capstone {#w6}
+
+| # | Case | Organisation | Core Facts Used in Class | Key Teaching Point | Business Model Lesson |
+|---|------|-------------|--------------------------|-------------------|----------------------|
+| 43 | **Philips HealthSuite (revisited)** | Philips | Consumer electronics divested in 2021; full pivot to connected health infrastructure; canvas revisited from Week 1 with five weeks of domain knowledge | Strategic clarity sometimes requires subtraction — removing businesses, not adding them | Platform model requires focus; diversified conglomerates are structurally disadvantaged in health AI |
+| 44 | **Omada Health** | Omada Health | Digital therapeutics for diabetes/hypertension prevention; \$732M raised through 2024; 500,000 members; per-member-per-month paid by employers and health plans; pricing depends on clinical evidence base | Clinical evidence is what justifies premium B2B pricing | Without RCT evidence, B2B health SaaS competes on price; with it, it competes on ROI |
+| 45 | **Dexcom continuous glucose monitor** | Dexcom | \$3.6B revenue in 2023; 85% from consumable sensors replaced every 10 days; enterprise value multiple 8× revenue vs. 2–3× for pure device companies | Recurring consumable model generates superior valuation multiple to hardware | Design the business model around the consumable, not the device; the device is the acquisition cost |
+| 46 | **Hinge Health** | Hinge Health | Digital physical therapy for musculoskeletal pain; \$6.2B valuation 2024; sells to self-insured employers; ~\$120 per enrolled employee per year vs. \$4,000 average surgical episode cost avoided | ROI-based B2B selling: the product pays for itself in the first avoided surgery | Employer channel enables ROI narrative impossible in consumer or payer-direct models |
+| 47 | **Butterfly Network handheld ultrasound** | Butterfly Network | FDA-cleared handheld ultrasound; \$1.8B company value; regulatory clearance itself became the primary competitive barrier | Regulatory clearance is a durable moat when competitors cannot replicate the clinical evidence | Invest in regulatory pathway early; the cost is a barrier to competition, not just a compliance cost |
+| 48 | **Veracyte genomic cancer tests** | Veracyte | FDA-cleared genomic diagnostics; 70% gross margins; competitors cannot replicate without equivalent clinical evidence base | Clinical evidence creates pricing power at a level no consumer product can achieve | Evidence-based diagnostics command premium margins because the evidence is the product |
+| 49 | **Best Buy + Lively (GreatCall) acquisition** | Best Buy / Lively | Best Buy acquired Lively for \$800M in 2018; Lively used Best Buy's physical retail footprint to reach seniors who would not find them online | Physical retail is a strategic distribution asset for senior tech, not a legacy liability | CAC through physical retail is lower than digital for senior segments; trust transfer from known retailer is significant |
+| 50 | **Amazon Alexa Together (unit economics)** | Amazon | \$19.99/month senior safety subscription; zero marginal CAC via existing Echo install base; fall detection via built-in motion sensors | The best distribution strategy uses infrastructure that already exists | Platform leverage eliminates CAC entirely; 100M Echo device owners are a pre-acquired customer base |
+| 51 | **AppWorks Taiwan senior health investment thesis** | AppWorks | Taiwan's leading tech VC; explicitly identified aging and health as priority sector 2024–2028; open application process | Local VC is signalling where the Taiwan market is heading | Sector-focused VC signals validate market timing; alignment with AppWorks thesis improves fundraising narrative |
+
+: {tbl-colwidths="[3,15,12,25,23,22]"}
+
+---
+
+# Cross-Reference Index {#xref}
+
+Cases appearing in or relevant to multiple weeks of the course.
+
+| Case | Primary Week | Also Relevant To | Connection |
+|------|-------------|-----------------|------------|
+| Livongo Health | W1 | W6 | Business Model Canvas anchor case; revisited with domain knowledge |
+| Philips HealthSuite | W1 | W6 | Canvas introduced W1; strategic pivot revisited W6 |
+| Google DeepMind retinal study | W1 | W4 | Introduced as AI case; revisited as appropriate tech case |
+| Microsoft Nuance DAX | W1 | W6 | Introduced as AI acquisition; unit economics revisited W6 |
+| Apple Watch platform | W1 | W3, W5 | Introduced W1; AIoT architecture W3; fall detection W5 |
+| Amazon One Medical vs. Amazon Care | W1 | W6 | Build vs. buy lesson introduced W1; go-to-market revisited W6 |
+| Taiwan NHI data asset | W1 | W2, W6 | Data value introduced W1; pipeline detail W2; payer context W6 |
+| Google Fitbit acquisition | W2 | W3 | Data acquisition W2; wearable hardware strategy W3 |
+| Apple ResearchKit | W2 | W3 | Data infrastructure W2; clinical study platform W3 |
+| CarePredict | W3 | W5 | AIoT architecture W3; market sizing W5 |
+| SafelyYou | W3 | W5 | AIoT W3; fall detection landscape W5 |
+| ElliQ vs. telephone befriending | W4 | W5 | Appropriate tech W4; senior product design W5 |
+| PARO vs. ROBEAR | W4 | W5 | Japan case introduced W4; design principles W5 |
+| Microsoft Inclusive Design | W5 | W4 | Design principles W5; appropriate tech framing W4 |
+| GrandPad | W5 | W6 | Product design W5; unit economics and retention W6 |
+| Dexcom | W3 | W6 | Consumable hardware introduced W3; valuation model W6 |
+| LINE Health+ | W4 | W5 | Channel strategy W4; distribution model W5 |
+| Taiwan LTC 2.0 programme | W4 | W6 | Pain point context W4; distribution channel W6 |
+
+: {tbl-colwidths="[25,15,20,40]"}
+
+---
+
+# Summary Statistics {.unnumbered}
+
+
+| Dimension | Count |
+|-----------|-------|
+| Total case studies | 51 |
+| Big tech company cases (Google, Microsoft, Apple, Amazon) | 22 |
+| Taiwan-specific cases | 9 |
+| Japan / Asia-Pacific cases | 6 |
+| Failed or cautionary cases | 10 |
+| Cases with published quantitative outcomes | 31 |
+| Cases available via public sources (no paywall) | 44 |
+| Cases spanning multiple weeks | 18 |
+
+: Case study composition at a glance
+
+::: {.callout-tip}
+## For Instructors: Keeping Cases Current
+All financial figures (valuations, acquisition prices, revenue) should be verified against the most recent public disclosures before each cohort. Health tech valuations and company strategies change rapidly. Cases marked as "failed or cautionary" are particularly valuable for student critical thinking and should not be replaced with more flattering recent data when it becomes available — the failures teach as much as the successes.
+:::
+
+---
+
+*Reference document compiled for internal academic use. All case data sourced from publicly available financial disclosures, published academic studies, government statistical databases, and company investor relations materials. No proprietary datasets were used in the preparation of this document.*

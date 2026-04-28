@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Innovation: From Cross-Cultural Communication to Smart Practice</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background-color: #f0f0f0; }
+        main { width: 80%; height: 80%; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.1); position: relative; overflow: hidden; }
+        section { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; box-sizing: border-box; background-color: white; text-align: center;}
+        section.active { display: flex; }
+        h1, h2, h3 { text-align: center; }
+        ul { list-style: none; padding: 0; }
+        li { opacity: 0; transition: opacity 0.5s; margin-bottom: 1em; }
+        li.visible { opacity: 1; }
+        .navigation { margin-top: 1rem; }
+        button { padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; }
+        img { max-width: 80%; max-height: 40%; }
+    </style>
+</head>
+<body>
+    <main id="presentation">
+        <section class="active">
+            <h1>Social Innovation: From Cross-Cultural Communication to Smart Practice</h1>
+            <h2>MBA Graduate Course · 6 Weeks · 3 Hours per Week</h2>
+        </section>
+        <section>
+            <h2>Week 1: AI Strategy in Healthcare</h2>
+            <ul>
+                <li class="incremental"><strong>Keywords:</strong> AI adoption · Strategic investment · Build vs buy · Vendor risk · ROI framing · IBM Watson lesson</li>
+                <li class="incremental"><strong>Management Focus:</strong> AI adoption as a strategic decision.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>The IBM Watson Health Case</h3>
+            <ul>
+                <li class="incremental">Initial acquisition investment exceeded <strong>$4 billion</strong>.</li>
+                <li class="incremental">Acquired companies like <strong>Truven Health Analytics</strong> and <strong>Merge Healthcare</strong>.</li>
+                <li class="incremental">Partnerships with over <strong>200</strong> hospitals globally.</li>
+                <li class="incremental">The unit was sold in 2022 for approximately <strong>$1 billion</strong>.</li>
+                <li class="incremental">A <strong>75% loss</strong> in acquisition value alone.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Failed Pilots</h3>
+            <ul>
+                <li class="incremental">MD Anderson’s <strong>$62 million</strong> oncology project.</li>
+                <li class="incremental">Evaluating the risks of strategic lock-in.</li>
+                <li class="incremental">How to frame AI investment cases for boards and executive committees.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Theories & Seminal Readings</h3>
+            <ul>
+                <li class="incremental"><strong>Disruptive Innovation</strong> (Bower & Christensen, 1995)</li>
+                <li class="incremental"><strong>Technology Acceptance Model (TAM)</strong> (Davis, 1989)</li>
+                <li class="incremental"><strong>Resource-Based View (RBV)</strong> (Barney, 1991)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Week 2: AI in the Medical Sector</h2>
+            <ul>
+                <li class="incremental"><strong>Keywords:</strong> Market entry · Regulatory strategy · Partnership models · Liability management · Value chain disruption · Innovation pipeline</li>
+                <li class="incremental"><strong>Management Focus:</strong> Navigating institutional complexity in a regulated market.</li>
+            </ul>
+        </section>
+        <section>
+            <h3>FDA Authorization</h3>
+            <ul>
+                <li class="incremental">As of mid-2024, the FDA has authorized over <strong>950</strong> AI/ML-enabled medical devices.</li>
+                <li class="incremental">Radiology accounts for <strong>80%</strong> of clearances.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Week 3: AI & Data as Strategic Assets</h2>
+            <ul>
+                <li class="incremental"><strong>Keywords:</strong> Data governance · Competitive moat · Platform strategy · Monetisation · Risk & compliance · Organisational readiness</li>
+                <li class="incremental"><strong>Management Focus:</strong> How AI amplifies the value of proprietary data.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Week 4: AI & IoT Operations</h2>
+             <ul>
+                <li class="incremental"><strong>Keywords:</strong> Operational efficiency · Smart infrastructure · Ecosystem management · Scalability · Capital allocation · Supply chain AI</li>
+                <li class="incremental"><strong>Management Focus:</strong> AI-IoT integration through an operational and ecosystem lens.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Week 5: AI for Social Impact</h2>
+            <ul>
+                <li class="incremental"><strong>Keywords:</strong> Stakeholder mapping · Public-private partnership · ESG integration · Social ROI · Appropriate technology · Change management · Inequality</li>
+                <li class="incremental"><strong>Management Focus:</strong> Shifting the unit of analysis from the firm to society.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Week 6: Smart Silver Economy Business Model</h2>
+            <ul>
+                <li class="incremental"><strong>Keywords:</strong> Market sizing · Business model canvas · Value proposition · Customer segmentation · Revenue streams · Social enterprise · Longevity economy</li>
+                <li class="incremental"><strong>Management Focus:</strong> Integrating the course's themes into a capstone business model exercise.</li>
+            </ul>
+        </section>
+    </main>
+    <div class="navigation">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    <script>
+        const slides = document.querySelectorAll('#presentation section');
+        const nextButton = document.getElementById('next');
+        const prevButton = document.getElementById('prev');
+        let currentSlide = 0;
+        let incrementalElements = [];
+        let incrementalIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            incrementalElements = slides[index] ? slides[index].querySelectorAll('.incremental') : [];
+            incrementalIndex = 0;
+            if(incrementalElements) incrementalElements.forEach(el => el.classList.remove('visible'));
+        }
+
+        function nextStep() {
+            if (incrementalIndex < incrementalElements.length) {
+                incrementalElements[incrementalIndex].classList.add('visible');
+                incrementalIndex++;
+            } else if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        function prevStep() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        nextButton.addEventListener('click', nextStep);
+        prevButton.addEventListener('click', prevStep);
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
