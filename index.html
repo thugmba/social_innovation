@@ -1,0 +1,1580 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>GMBA — AI, Strategy & Social Innovation · Course Intro</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  /* ===========================================================
+     DECK FRAME — 1920×1080, projection-appropriate type/spacing
+     =========================================================== */
+  html, body { margin: 0; padding: 0; background: #0b0a09; font-family: var(--font-body); }
+
+  deck-stage { background: #0b0a09; }
+  deck-stage > section {
+    background: var(--cream-50);
+    color: var(--ink-950);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* TYPE_SCALE  (px) — projection sizes */
+  /* title 64 · subtitle 44 · body 34 · small 28 · micro 22 */
+  /* SPACING — paddingTop 100 · paddingBottom 80 · paddingX 100 · titleGap 52 · itemGap 28 */
+
+  .slide {
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding: 100px 100px 80px 100px;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .slide.dark { background: var(--ink-950); color: var(--cream-50); }
+  .slide.crimson { background: var(--crimson-700); color: var(--white); }
+  .slide.cream { background: var(--cream-50); }
+
+  /* ---------- chrome: top brand bar + footer ---------- */
+  .chrome-top {
+    position: absolute;
+    top: 40px; left: 100px; right: 100px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-body);
+    font-size: 18px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--ink-500);
+  }
+  .crimson .chrome-top, .dark .chrome-top { color: rgba(255,255,255,0.55); }
+  .chrome-top .brand { display: flex; align-items: center; gap: 14px; }
+  .chrome-top .brand-dot { width: 8px; height: 8px; background: var(--gold-500); border-radius: 50%; }
+  .chrome-top .brand strong { color: var(--ink-950); font-weight: 700; }
+  .crimson .chrome-top .brand strong, .dark .chrome-top .brand strong { color: var(--white); }
+
+  .chrome-bottom {
+    position: absolute;
+    bottom: 36px; left: 100px; right: 100px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-body);
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-500);
+  }
+  .crimson .chrome-bottom, .dark .chrome-bottom { color: rgba(255,255,255,0.55); }
+  .chrome-bottom .rule {
+    flex: 1; height: 1px; background: var(--stone-300); margin: 0 24px;
+  }
+  .crimson .chrome-bottom .rule, .dark .chrome-bottom .rule { background: rgba(255,255,255,0.2); }
+
+  /* ---------- typography ---------- */
+  .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson-700);
+    margin: 0;
+  }
+  .crimson .eyebrow { color: var(--gold-300); }
+  .dark .eyebrow { color: var(--gold-500); }
+
+  .title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 88px;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--ink-950);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .crimson .title, .dark .title { color: var(--white); }
+
+  .h-section {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .h-frame {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0;
+  }
+  .lead {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.45;
+    color: var(--ink-700);
+    text-wrap: pretty;
+    margin: 0;
+  }
+  .crimson .lead, .dark .lead { color: rgba(255,255,255,0.85); }
+
+  .body-text {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.5;
+    color: var(--ink-700);
+    text-wrap: pretty;
+    margin: 0;
+  }
+  .body-small {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-700);
+    margin: 0;
+  }
+  .citation {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--ink-500);
+    margin: 0;
+  }
+
+  /* ---------- keyword chips (pop-in) ---------- */
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 14px 12px;
+    list-style: none; margin: 0; padding: 0;
+  }
+  .chip {
+    display: inline-flex; align-items: center;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+    color: var(--ink-950);
+    background: var(--white);
+    border: 1px solid var(--stone-300);
+    border-radius: 2px;
+    padding: 12px 20px;
+    /* animation start state */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 360ms var(--ease), transform 360ms var(--ease);
+  }
+  .crimson .chip { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.25); color: var(--white); }
+  .chip.is-in { opacity: 1; transform: translateY(0); }
+  .chip-dot { width: 6px; height: 6px; background: var(--crimson-700); border-radius: 50%; margin-right: 12px; }
+  .crimson .chip-dot { background: var(--gold-500); }
+
+  /* ---------- big number / count up ---------- */
+  .stat {
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .stat-num {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--crimson-700);
+    font-variant-numeric: tabular-nums;
+  }
+  .crimson .stat-num, .dark .stat-num { color: var(--gold-300); }
+  .stat-num.ink { color: var(--ink-950); }
+  .stat-label {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: var(--ink-700);
+    max-width: 360px;
+    text-transform: none;
+  }
+  .crimson .stat-label, .dark .stat-label { color: rgba(255,255,255,0.8); }
+  .stat-source {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-500);
+  }
+  .crimson .stat-source, .dark .stat-source { color: rgba(255,255,255,0.55); }
+
+  /* hero band band */
+  .hero-band {
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 280px;
+    background: var(--crimson-700);
+    z-index: 0;
+  }
+  .hero-band .luce {
+    position: absolute;
+    right: 100px; top: 0; bottom: 0;
+    width: 320px;
+    opacity: 0.08;
+    background: url("assets/luce-chapel-silhouette.svg") center / contain no-repeat;
+  }
+
+  /* ---------- framework rows (W*.2 slides) ---------- */
+  .frame-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1.2fr;
+    gap: 36px;
+    padding: 30px 0;
+    border-top: 1px solid var(--stone-300);
+    align-items: start;
+  }
+  .frame-row:last-child { border-bottom: 1px solid var(--stone-300); }
+  .frame-num {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--crimson-700);
+    letter-spacing: 0.04em;
+    padding-top: 6px;
+  }
+  .frame-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--ink-950);
+    margin: 0 0 6px 0;
+  }
+  .frame-cite {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--ink-500);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .frame-hook {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-700);
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  /* ---------- agenda grid (overview) ---------- */
+  .agenda {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 32px;
+  }
+  .agenda-item {
+    background: var(--white);
+    border: 1px solid var(--stone-300);
+    border-radius: 10px;
+    padding: 36px 36px;
+    display: flex; flex-direction: column; gap: 18px;
+    box-shadow: var(--shadow-1);
+  }
+  .agenda-week {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--crimson-700);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .agenda-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 1.15;
+    color: var(--ink-950);
+    margin: 0;
+  }
+  .agenda-meta {
+    margin-top: auto;
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--ink-500);
+    border-top: 1px solid var(--stone-200);
+    padding-top: 16px;
+  }
+
+  /* week opener (W*.1) */
+  .week-opener {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 80px;
+    height: 100%;
+    align-items: stretch;
+  }
+  .week-opener .left {
+    display: flex; flex-direction: column; gap: 32px; padding-top: 40px;
+    z-index: 1;
+  }
+  .week-opener .right {
+    display: flex; flex-direction: column; gap: 36px;
+    background: var(--white);
+    border: 1px solid var(--stone-300);
+    border-radius: 10px;
+    padding: 56px 48px;
+    box-shadow: var(--shadow-1);
+    align-self: center;
+    margin-top: 60px;
+  }
+  .stat-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 40px 32px;
+  }
+  .stat-grid .stat-num { font-size: 76px; }
+  .stat-grid .stat-label { font-size: 19px; }
+
+  /* week opener — keywords block */
+  .keywords-block {
+    margin-top: 20px;
+  }
+  .keywords-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson-700);
+    margin: 0 0 18px 0;
+  }
+  .crimson .keywords-label { color: var(--gold-300); }
+
+  /* ---------- cover ---------- */
+  .cover {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 0;
+    background: var(--cream-50);
+  }
+  .cover-left {
+    padding: 100px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    background: var(--cream-50);
+    position: relative;
+  }
+  .cover-right {
+    background: var(--crimson-700);
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-right::before {
+    content: ""; position: absolute; inset: 0;
+    background: url("assets/luce-chapel-silhouette.svg") center 75% / 80% no-repeat;
+    opacity: 0.12;
+  }
+  .cover-right .label {
+    position: absolute;
+    top: 60px; left: 60px; right: 60px;
+    font-family: var(--font-body);
+    font-weight: 600; font-size: 16px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+  }
+  .cover-right .seal {
+    position: absolute;
+    bottom: 60px; left: 60px; right: 60px;
+    color: var(--white);
+  }
+  .cover-right .seal .year {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 110px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--white);
+  }
+  .cover-right .seal .yearlabel {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-top: 12px;
+  }
+  .cover-meta {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  }
+  .cover-meta .field-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-500);
+    margin: 0 0 10px 0;
+  }
+  .cover-meta .field-value {
+    font-family: var(--font-display);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+    color: var(--ink-950);
+    margin: 0;
+  }
+  .cover-meta .rule {
+    height: 2px; width: 36px; background: var(--crimson-700);
+    margin-bottom: 14px;
+  }
+
+  /* closing */
+  .closing-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+    flex: 1;
+    align-content: center;
+  }
+  .closing-block .label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson-700);
+    margin: 0 0 22px 0;
+  }
+  .closing-list {
+    list-style: none; padding: 0; margin: 0;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .closing-list li {
+    display: grid; grid-template-columns: 1fr auto;
+    align-items: baseline;
+    border-bottom: 1px solid var(--stone-300);
+    padding-bottom: 18px;
+    font-family: var(--font-body);
+    font-size: 26px;
+    color: var(--ink-700);
+  }
+  .closing-list li strong { color: var(--ink-950); font-weight: 600; }
+  .closing-list li .right { font-family: var(--font-mono); font-size: 22px; color: var(--crimson-700); }
+
+  /* ---------- helpers ---------- */
+  .pop {
+    opacity: 0; transform: translateY(8px);
+    transition: opacity 480ms var(--ease), transform 480ms var(--ease);
+  }
+  .is-in .pop, .pop.is-in { opacity: 1; transform: translateY(0); }
+
+  .num-callout {
+    display: inline-flex; align-items: baseline; gap: 14px;
+    padding: 6px 0;
+  }
+  .num-callout .n {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 56px;
+    color: var(--crimson-700);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .num-callout .lbl {
+    font-family: var(--font-body);
+    font-size: 18px;
+    color: var(--ink-700);
+    line-height: 1.3;
+  }
+
+  /* progress dots used in chrome-top right */
+  .progress {
+    display: flex; gap: 6px; align-items: center;
+  }
+  .progress .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--stone-300);
+  }
+  .progress .dot.active { background: var(--crimson-700); }
+  .crimson .progress .dot { background: rgba(255,255,255,0.3); }
+  .crimson .progress .dot.active { background: var(--gold-500); }
+
+  /* divider gold dot */
+  .gold-dot {
+    width: 10px; height: 10px; background: var(--gold-500);
+    border-radius: 50%; display: inline-block; vertical-align: middle;
+  }
+
+  /* slide W2 split image card */
+  .figure-card {
+    background: var(--white);
+    border: 1px solid var(--stone-300);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow-1);
+    display: flex; flex-direction: column;
+  }
+  .figure-img {
+    aspect-ratio: 4 / 3;
+    background-size: cover; background-position: center;
+  }
+  .figure-cap {
+    padding: 18px 22px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--ink-700);
+    border-top: 1px solid var(--stone-200);
+  }
+
+  /* slide-frame label (top right of W*.2 slides) */
+  .frame-label {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--crimson-700);
+  }
+</style>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- ============ 01 · COVER ============ -->
+  <section data-label="01 Cover">
+    <div class="cover">
+      <div class="cover-left">
+        <div>
+          <div class="chrome-top" style="position: static; left: auto; right: auto; top: auto; padding: 0; margin-bottom: 80px;">
+            <div class="brand">
+              <span class="brand-dot"></span>
+              <span><strong>Tunghai University</strong>&nbsp;·&nbsp;東海大學</span>
+            </div>
+            <div>College of Management · GMBA</div>
+          </div>
+
+          <p class="eyebrow" style="margin-bottom: 36px;">Course Introduction · Spring 2026</p>
+          <h1 class="title" style="font-size: 96px; max-width: 920px;">
+            AI, Strategy &amp; Social Innovation
+          </h1>
+          <p class="lead" style="margin-top: 32px; max-width: 760px;">
+            A graduate seminar on artificial intelligence as a strategic and organisational
+            phenomenon — adoption, value creation, governance, and social consequence.
+          </p>
+        </div>
+
+        <div class="cover-meta">
+          <div>
+            <div class="rule"></div>
+            <p class="field-label">Instructor</p>
+            <p class="field-value">Brian Kim</p>
+          </div>
+          <div>
+            <div class="rule"></div>
+            <p class="field-label">Program</p>
+            <p class="field-value">Global MBA<br><span style="color:var(--ink-500); font-size: 18px; font-family: var(--font-body);">College of Management</span></p>
+          </div>
+          <div>
+            <div class="rule"></div>
+            <p class="field-label">Format</p>
+            <p class="field-value">6 weeks · 18 hrs<br><span style="color:var(--ink-500); font-size: 18px; font-family: var(--font-body);">Seminar · English</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-right">
+        <div class="label">東海大學 · College of Management</div>
+        <div class="seal">
+          <div class="year"><span class="counter" data-target="2026" data-duration="1400">2026</span></div>
+          <div class="yearlabel">Academic year · Spring term</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 · COURSE OVERVIEW ============ -->
+  <section data-label="02 Course Overview">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>GMBA</strong> · AI, Strategy &amp; Social Innovation</span></div>
+        <div>Course Overview</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; flex: 1; align-content: center; padding-top: 40px;">
+        <div>
+          <p class="eyebrow">The shape of the course</p>
+          <h2 class="h-section" style="margin-top: 28px; max-width: 600px;">Six themes, mapped from firm to society.</h2>
+          <p class="lead" style="margin-top: 36px; max-width: 540px;">
+            The seminar moves from individual adoption decisions to industry-level disruption,
+            then outward to data markets, infrastructure, public policy, and the longevity economy.
+          </p>
+
+          <div style="display: grid; grid-template-columns: repeat(3, auto); gap: 56px; margin-top: 72px; max-width: 620px;">
+            <div class="stat">
+              <div class="stat-num ink"><span class="counter" data-target="6" data-duration="1100">6</span></div>
+              <div class="stat-label">Weekly sessions</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num ink"><span class="counter" data-target="18" data-duration="1300">18</span></div>
+              <div class="stat-label">Contact hours</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num ink"><span class="counter" data-target="18" data-duration="1500">18</span></div>
+              <div class="stat-label">Seminal readings</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="agenda">
+          <div class="agenda-item"><span class="agenda-week">Week 1</span><h3 class="agenda-title">AI Strategy in Healthcare</h3><div class="agenda-meta">Watson Health · Build vs buy</div></div>
+          <div class="agenda-item"><span class="agenda-week">Week 2</span><h3 class="agenda-title">AI in the Medical Sector</h3><div class="agenda-meta">Regulation · Value chain</div></div>
+          <div class="agenda-item"><span class="agenda-week">Week 3</span><h3 class="agenda-title">AI &amp; Data as Strategic Assets</h3><div class="agenda-meta">Governance · Platforms</div></div>
+          <div class="agenda-item"><span class="agenda-week">Week 4</span><h3 class="agenda-title">AI &amp; IoT Operations</h3><div class="agenda-meta">Smart infrastructure</div></div>
+          <div class="agenda-item"><span class="agenda-week">Week 5</span><h3 class="agenda-title">AI for Social Impact</h3><div class="agenda-meta">Public sector · ESG</div></div>
+          <div class="agenda-item"><span class="agenda-week">Week 6</span><h3 class="agenda-title">Smart Silver Economy Business Model</h3><div class="agenda-meta">Capstone · Longevity</div></div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Tunghai GMBA · 東海大學</span>
+        <div class="rule"></div>
+        <span>Course Introduction</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · W1.1 ============ -->
+  <section data-label="03 Week 1 · Healthcare">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 01</strong> · 03 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">AI Strategy in Healthcare</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 01 · Session 1 of 2</p>
+          <h2 class="title" style="font-size: 80px; margin-top: 24px; max-width: 720px;">AI Strategy in Healthcare</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            AI adoption is a strategic decision, not a technical one — and Watson Health is the
+            seminar's opening case study in how that decision can fail at scale.
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>AI adoption</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Strategic investment</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Build vs buy</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Vendor risk</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>ROI framing</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>IBM Watson lesson</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">Headline figures · Watson Health</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="4" data-duration="1300">4</span>B+</div>
+              <div class="stat-label">IBM acquisition spend on Watson Health</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="75" data-duration="1500">75</span>%</div>
+              <div class="stat-label">Loss in acquisition value at 2022 sale</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="62" data-duration="1300">62</span>M</div>
+              <div class="stat-label">MD Anderson failed oncology pilot</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="200" data-duration="1500">200</span>+</div>
+              <div class="stat-label">Hospital partnerships at peak</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: IBM disclosures, 2015–2022.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 01 · AI Strategy in Healthcare</span>
+        <div class="rule"></div>
+        <span>03 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · W1.2 ============ -->
+  <section data-label="04 Week 1 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 01</strong> · 04 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Management focus</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">A failed acquisition, read through three classic lenses.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            Students analyse the build‑vs‑buy decision through Christensen's disruption framework,
+            the Technology Acceptance Model, and Barney's Resource‑Based View — locating the failure
+            not in the algorithm but in strategic posture.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n">$<span class="counter" data-target="1" data-duration="1100">1</span>B</span>
+              <span class="lbl">2022 sale price<br>(from $4B+ in)</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Disruptive Innovation</h3>
+              <p class="frame-cite">Bower &amp; Christensen (1995). <em>Harvard Business Review</em>, 73(1), 43–53.</p>
+            </div>
+            <p class="frame-hook">Why incumbents like IBM misread Watson's clinical promise — disruptive AI capabilities are easily distorted by anchoring to existing customer expectations and margin structures.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Technology Acceptance Model</h3>
+              <p class="frame-cite">Davis (1989). <em>MIS Quarterly</em>, 13(3), 319–340.</p>
+            </div>
+            <p class="frame-hook">Locates Watson's adoption failure in clinician workflow, not algorithmic capability — perceived usefulness and ease of use as decisive variables.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Resource‑Based View</h3>
+              <p class="frame-cite">Barney (1991). <em>Journal of Management</em>, 17(1), 99–120.</p>
+            </div>
+            <p class="frame-hook">Underpins the build‑vs‑buy question: should AI capability be cultivated as a rare and inimitable resource, or sourced from vendors with no sustainable advantage?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 01 · Frameworks</span>
+        <div class="rule"></div>
+        <span>04 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 · W2.1 ============ -->
+  <section data-label="05 Week 2 · Medical Sector">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 02</strong> · 05 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">AI in the Medical Sector</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 02 · Session 1 of 2</p>
+          <h2 class="title" style="font-size: 80px; margin-top: 24px; max-width: 720px;">AI in the Medical Sector</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            A regulated market where AI deployment hinges on institutional complexity — approval pathways,
+            partnership templates, and the careful management of clinical liability.
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>Market entry</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Regulatory strategy</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Partnership models</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Liability management</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Value chain disruption</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Innovation pipeline</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">Market signals · 2024 → 2033</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="950" data-duration="1700">950</span>+</div>
+              <div class="stat-label">FDA‑authorized AI/ML medical devices (mid‑2024)</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="80" data-duration="1300">80</span>%</div>
+              <div class="stat-label">Share cleared in radiology</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="20" data-duration="1300">20</span>B</div>
+              <div class="stat-label">Global AI healthcare market, 2024</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="600" data-duration="1700">600</span>B</div>
+              <div class="stat-label">Projected market, 2033</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: FDA device authorisations · industry projections, 2024.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 02 · AI in the Medical Sector</span>
+        <div class="rule"></div>
+        <span>05 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · W2.2 ============ -->
+  <section data-label="06 Week 2 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 02</strong> · 06 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Management focus</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">Mapping where AI inserts itself in regulated value chains.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            Students will trace AI across diagnosis, treatment, billing and engagement — combining
+            Porter's structural lens with institutional theory and a transaction‑cost reading of
+            vendor‑provider partnerships.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n">30×</span>
+              <span class="lbl">Market growth<br>2024 → 2033</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Porter's Value Chain</h3>
+              <p class="frame-cite">Porter &amp; Millar (1985). <em>Harvard Business Review</em>, 63(4), 149–160.</p>
+            </div>
+            <p class="frame-hook">A structural lens for mapping where AI enters diagnosis, treatment, billing and patient engagement — and where margin capture is most likely.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Institutional Theory</h3>
+              <p class="frame-cite">DiMaggio &amp; Powell (1983). <em>American Sociological Review</em>, 48(2), 147–160.</p>
+            </div>
+            <p class="frame-hook">Explains why medical AI deployments converge on similar regulatory pathways, certification routines, and partnership templates.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Transaction Cost Economics</h3>
+              <p class="frame-cite">Williamson (1981). <em>American Journal of Sociology</em>, 87(3), 548–577.</p>
+            </div>
+            <p class="frame-hook">Frames vendor–provider liability allocation and contract design as a question of governance choice under uncertainty and asset specificity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 02 · Frameworks</span>
+        <div class="rule"></div>
+        <span>06 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · W3.1 ============ -->
+  <section data-label="07 Week 3 · Data">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 03</strong> · 07 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">AI &amp; Data as Strategic Assets</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 03 · Session 1 of 2</p>
+          <h2 class="title" style="font-size: 80px; margin-top: 24px; max-width: 720px;">AI &amp; Data as Strategic Assets</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            Data is the asset; AI is the multiplier. The session examines governance, monetisation,
+            and the platform economics of two‑sided data markets.
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>Data governance</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Competitive moat</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Platform strategy</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Monetisation</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Risk &amp; compliance</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Organisational readiness</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">The data‑value gap · by 2030</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="15.7" data-duration="1700" data-decimals="1">15.7</span>T</div>
+              <div class="stat-label">AI's projected contribution to global GDP</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="60" data-duration="1300">60</span>%</div>
+              <div class="stat-label">Of value trapped in ungoverned data silos</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="2030" data-duration="1500">2030</span></div>
+              <div class="stat-label">Horizon year for the projection</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">2‑sided</div>
+              <div class="stat-label">Market structure underpinning AI platforms</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: PwC, McKinsey AI economic impact estimates.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 03 · AI &amp; Data as Strategic Assets</span>
+        <div class="rule"></div>
+        <span>07 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · W3.2 ============ -->
+  <section data-label="08 Week 3 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 03</strong> · 08 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Management focus</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">From sensing change to monetising the asymmetry it creates.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            Three economic lenses combine: dynamic capabilities for renewal,
+            two‑sided market theory for monetisation, and the lemons problem to make sense of
+            opacity in AI training data and model provenance.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n">$<span class="counter" data-target="15.7" data-duration="1700" data-decimals="1">15.7</span>T</span>
+              <span class="lbl">AI contribution<br>to global GDP, 2030</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Dynamic Capabilities</h3>
+              <p class="frame-cite">Teece, Pisano &amp; Shuen (1997). <em>Strategic Management Journal</em>, 18(7), 509–533.</p>
+            </div>
+            <p class="frame-hook">Frames data‑and‑AI strategy as sensing, seizing and reconfiguring — testing whether organisations can renew data assets, not merely accumulate them.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Platform Economics (Two‑Sided Markets)</h3>
+              <p class="frame-cite">Rochet &amp; Tirole (2003). <em>JEEA</em>, 1(4), 990–1029.</p>
+            </div>
+            <p class="frame-hook">Explains how AI firms monetise data by orchestrating two‑sided markets where one side's training signal creates value for the other.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Information Asymmetry</h3>
+              <p class="frame-cite">Akerlof (1970). <em>Quarterly Journal of Economics</em>, 84(3), 488–500.</p>
+            </div>
+            <p class="frame-hook">Maps the lemons problem onto AI markets: transparency and certification become economic — not just ethical — necessities.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 03 · Frameworks</span>
+        <div class="rule"></div>
+        <span>08 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 09 · W4.1 ============ -->
+  <section data-label="09 Week 4 · IoT">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 04</strong> · 09 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">AI &amp; IoT Operations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 04 · Session 1 of 2</p>
+          <h2 class="title" style="font-size: 80px; margin-top: 24px; max-width: 720px;">AI &amp; IoT Operations</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            The Internet of Things creates a new operational layer. The session examines
+            capital allocation, ecosystem management, and the diffusion of connected infrastructure.
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>Operational efficiency</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Smart infrastructure</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Ecosystem management</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Scalability</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Capital allocation</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Supply chain AI</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">The operational layer · by 2030</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="30" data-duration="1500">30</span>–<span class="counter" data-target="40" data-duration="1700">40</span>B</div>
+              <div class="stat-label">Connected IoT devices</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="12.6" data-duration="1700" data-decimals="1">12.6</span>T</div>
+              <div class="stat-label">High estimate of IoT economic value</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="14" data-duration="1500">14</span>T</div>
+              <div class="stat-label">Industrial efficiency upside</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="5.5" data-duration="1500" data-decimals="1">5.5</span>T</div>
+              <div class="stat-label">Low estimate of IoT economic value</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: McKinsey Global Institute, IoT economic value estimates.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 04 · AI &amp; IoT Operations</span>
+        <div class="rule"></div>
+        <span>09 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10 · W4.2 ============ -->
+  <section data-label="10 Week 4 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 04</strong> · 10 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Management focus</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">Connected infrastructure rarely succeeds inside one firm.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            Three frames converge on the IoT problem: ecosystem co‑evolution, the uneven diffusion
+            of connected capabilities, and the lean discipline of asking whether sensors fix waste —
+            or merely automate it.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="40" data-duration="1500">40</span>B</span>
+              <span class="lbl">Connected devices<br>upper bound, 2030</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Ecosystem Theory</h3>
+              <p class="frame-cite">Moore (1993). <em>Harvard Business Review</em>, 71(3), 75–86.</p>
+            </div>
+            <p class="frame-hook">Connected AI succeeds in co‑evolving networks of device makers, platform operators, integrators, and end users — not within a single firm's boundary.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Diffusion of Innovations</h3>
+              <p class="frame-cite">Rogers (2003). <em>Diffusion of innovations</em> (5th ed.). Free Press.</p>
+            </div>
+            <p class="frame-hook">Explains why early‑adopter sites — smart factories, connected hospitals — move years ahead of laggards, with consequences for capital‑allocation timing.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Lean Operations</h3>
+              <p class="frame-cite">Womack, Jones &amp; Roos (1990). <em>The machine that changed the world</em>. Rawson Associates.</p>
+            </div>
+            <p class="frame-hook">The benchmark against which AI‑IoT efficiency gains are measured: do sensors genuinely reduce waste, or merely automate an already‑flawed process?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 04 · Frameworks</span>
+        <div class="rule"></div>
+        <span>10 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · W5.1 ============ -->
+  <section data-label="11 Week 5 · Social Impact">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 05</strong> · 11 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">AI for Social Impact</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 05 · Session 1 of 2</p>
+          <h2 class="title" style="font-size: 80px; margin-top: 24px; max-width: 720px;">AI for Social Impact</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            The unit of analysis shifts from firm to society. When is AI the right answer — and
+            when does high‑tech displace a lower‑cost, community‑centred intervention?
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>Stakeholder mapping</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Public‑private partnership</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>ESG integration</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Social ROI</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Appropriate technology</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Change management</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Inequality</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">Public sector AI · the scale</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="85" data-duration="1500">85</span>B</div>
+              <div class="stat-label">Public sector AI spend, projected 2030</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="40" data-duration="1300">40</span>B</div>
+              <div class="stat-label">Saudi Arabia's national AI fund</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="40" data-duration="1300">40</span>%</div>
+              <div class="stat-label">Reduction in unintended societal harm via risk mitigation</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3‑BL</div>
+              <div class="stat-label">Triple bottom line as evaluation lens</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: IDC public sector AI projections; national AI strategies.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 05 · AI for Social Impact</span>
+        <div class="rule"></div>
+        <span>11 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12 · W5.2 ============ -->
+  <section data-label="12 Week 5 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 05</strong> · 12 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Management focus</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">Legitimacy across stakeholders, not only shareholders.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            The session combines stakeholder analysis, Schumacher's appropriate‑technology
+            discipline, and Elkington's triple‑bottom‑line — equipping students to evaluate AI
+            in welfare, education and justice systems.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n">$<span class="counter" data-target="85" data-duration="1500">85</span>B</span>
+              <span class="lbl">Public sector AI<br>spend, 2030</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Stakeholder Theory</h3>
+              <p class="frame-cite">Freeman (1984). <em>Strategic management: A stakeholder approach</em>. Pitman.</p>
+            </div>
+            <p class="frame-hook">The foundational tool for AI deployments in welfare, education and justice — where success depends on legitimacy across citizens, regulators, frontline workers and affected communities.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Appropriate Technology</h3>
+              <p class="frame-cite">Schumacher (1973). <em>Small is beautiful: Economics as if people mattered</em>. Blond &amp; Briggs.</p>
+            </div>
+            <p class="frame-hook">Disciplines the assumption that AI is always the answer — asking when a lower‑cost, community‑centred intervention better serves the people it is meant to help.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Triple Bottom Line</h3>
+              <p class="frame-cite">Elkington (1997). <em>Cannibals with forks: The triple bottom line of 21st century business</em>. Capstone.</p>
+            </div>
+            <p class="frame-hook">Extends performance measurement of AI initiatives beyond financial return to social and environmental outcomes — language for ESG and impact reporting.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 05 · Frameworks</span>
+        <div class="rule"></div>
+        <span>12 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 13 · W6.1 ============ -->
+  <section data-label="13 Week 6 · Silver Economy">
+    <div class="slide cream">
+      <div class="hero-band"><div class="luce"></div></div>
+      <div class="chrome-top" style="color: rgba(255,255,255,0.7);">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">Week 06</strong> · 13 / 15</span></div>
+        <div style="color:rgba(255,255,255,0.7);">Smart Silver Economy Business Model</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; flex: 1; padding-top: 220px;">
+        <div>
+          <p class="eyebrow">Week 06 · Capstone session</p>
+          <h2 class="title" style="font-size: 76px; margin-top: 24px; max-width: 760px;">Smart Silver Economy Business Model</h2>
+          <p class="lead" style="margin-top: 28px; max-width: 660px;">
+            The capstone integrates the seminar's themes into a business‑model exercise: design AI‑enabled
+            products for older adults — and stress‑test them against welfare‑framing defaults.
+          </p>
+
+          <div class="keywords-block">
+            <p class="keywords-label">Keywords</p>
+            <ul class="chips">
+              <li class="chip" data-chip><span class="chip-dot"></span>Market sizing</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Business model canvas</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Value proposition</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Customer segmentation</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Revenue streams</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Social enterprise</li>
+              <li class="chip" data-chip><span class="chip-dot"></span>Longevity economy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right" style="background: var(--white); border: 1px solid var(--stone-300); border-radius: 10px; padding: 56px 48px; box-shadow: var(--shadow-1); align-self: center; margin-top: 40px;">
+          <p class="eyebrow" style="font-size: 18px;">Longevity economy · by 2030</p>
+          <div class="stat-grid" style="margin-top: 36px;">
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="27" data-duration="1500">27</span>T</div>
+              <div class="stat-label">Global longevity economy</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">$<span class="counter" data-target="52" data-duration="1700">52</span>T</div>
+              <div class="stat-label">Spend by the 50‑plus cohort</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="54" data-duration="1300">54</span>%</div>
+              <div class="stat-label">Share of global consumption, 50+</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num"><span class="counter" data-target="34" data-duration="1300">34</span>%</div>
+              <div class="stat-label">Share of global wealth, 50+</div>
+            </div>
+          </div>
+          <p class="stat-source" style="margin-top: 30px;">Source: AARP, OECD, longevity economy projections.</p>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 06 · Smart Silver Economy</span>
+        <div class="rule"></div>
+        <span>13 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 14 · W6.2 ============ -->
+  <section data-label="14 Week 6 · Frameworks">
+    <div class="slide cream">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span><strong>Week 06</strong> · 14 / 15</span></div>
+        <div class="frame-label">Theoretical Foundations</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 80px; flex: 1; padding-top: 60px; align-items: start;">
+        <div>
+          <p class="eyebrow">Capstone integration</p>
+          <h2 class="h-section" style="font-size: 56px; margin-top: 24px; max-width: 460px;">Treat older adults as informed, value‑conscious consumers.</h2>
+          <p class="body-text" style="margin-top: 32px;">
+            Students apply Osterwalder's canvas, search blue‑ocean adjacencies in eldercare, and
+            reframe the segment through Prahalad's Base‑of‑the‑Pyramid logic. Session concludes
+            with student project presentations.
+          </p>
+
+          <div style="display:flex; gap: 40px; margin-top: 56px;">
+            <div class="num-callout">
+              <span class="n">$<span class="counter" data-target="27" data-duration="1500">27</span>T</span>
+              <span class="lbl">Longevity economy<br>by 2030</span>
+            </div>
+            <div class="num-callout">
+              <span class="n"><span class="counter" data-target="3" data-duration="900">3</span></span>
+              <span class="lbl">Frameworks<br>this session</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="frame-row">
+            <div class="frame-num">01</div>
+            <div>
+              <h3 class="frame-name">Business Model Canvas</h3>
+              <p class="frame-cite">Osterwalder &amp; Pigneur (2010). <em>Business model generation: A handbook for visionaries, game changers, and challengers</em>. John Wiley &amp; Sons.</p>
+            </div>
+            <p class="frame-hook">The structural backbone of the capstone — a shared template to design and stress‑test AI‑enabled silver‑economy ventures across customers, channels, revenue and partnerships.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">02</div>
+            <div>
+              <h3 class="frame-name">Blue Ocean Strategy</h3>
+              <p class="frame-cite">Kim &amp; Mauborgne (2004). <em>Harvard Business Review</em>, 82(10), 76–85.</p>
+            </div>
+            <p class="frame-hook">Directs students toward under‑served segments of the longevity economy, where value innovation opens new market space outside the crowded medical‑device niche.</p>
+          </div>
+          <div class="frame-row">
+            <div class="frame-num">03</div>
+            <div>
+              <h3 class="frame-name">Base of the Pyramid</h3>
+              <p class="frame-cite">Prahalad (2004). <em>The fortune at the bottom of the pyramid: Eradicating poverty through profits</em>. Wharton School Publishing.</p>
+            </div>
+            <p class="frame-hook">A decisive reframe: older adults as informed consumers whose aggregate purchasing power supports market‑based innovation, not welfare‑defaulted design.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span>Week 06 · Frameworks</span>
+        <div class="rule"></div>
+        <span>14 / 15</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 15 · CLOSING ============ -->
+  <section data-label="15 Closing">
+    <div class="slide" style="background: var(--ink-950); color: var(--cream-50);">
+      <div class="chrome-top">
+        <div class="brand"><span class="brand-dot"></span><span style="color:#fff;"><strong style="color:#fff;">GMBA</strong> · AI, Strategy &amp; Social Innovation</span></div>
+        <div>15 / 15 · Close</div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 100px; flex: 1; padding-top: 80px;">
+        <div>
+          <p class="eyebrow" style="color: var(--gold-500);">Course Close</p>
+          <h2 class="h-section" style="color: var(--white); margin-top: 24px; font-size: 72px; max-width: 540px;">Six weeks. One question.</h2>
+          <p class="lead" style="color: rgba(255,255,255,0.85); margin-top: 36px; max-width: 540px;">
+            When AI changes a market, what is the manager's job — and what frameworks
+            equip you to do it well?
+          </p>
+
+          <div style="margin-top: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 540px;">
+            <div>
+              <p class="eyebrow" style="color: var(--gold-500); font-size: 16px;">Instructor</p>
+              <p style="font-family: var(--font-display); font-size: 32px; color: var(--white); margin: 14px 0 4px 0;">Brian Kim</p>
+              <p style="font-family: var(--font-body); font-size: 18px; color: rgba(255,255,255,0.65); margin: 0;">College of Management · GMBA</p>
+            </div>
+            <div>
+              <p class="eyebrow" style="color: var(--gold-500); font-size: 16px;">Term</p>
+              <p style="font-family: var(--font-display); font-size: 32px; color: var(--white); margin: 14px 0 4px 0;">Spring 2026</p>
+              <p style="font-family: var(--font-body); font-size: 18px; color: rgba(255,255,255,0.65); margin: 0;">6 weekly sessions · 18 hours</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow" style="color: var(--gold-500);">Assessment</p>
+          <ul class="closing-list" style="margin-top: 28px;">
+            <li style="border-color: rgba(255,255,255,0.18); color: rgba(255,255,255,0.85);">
+              <span><strong style="color:#fff;">Case analyses</strong>  ·  weekly written briefs</span>
+              <span class="right" style="color: var(--gold-500);"><span class="counter" data-target="40" data-duration="1100">40</span>%</span>
+            </li>
+            <li style="border-color: rgba(255,255,255,0.18); color: rgba(255,255,255,0.85);">
+              <span><strong style="color:#fff;">Seminar participation</strong>  ·  framework application</span>
+              <span class="right" style="color: var(--gold-500);"><span class="counter" data-target="20" data-duration="1100">20</span>%</span>
+            </li>
+            <li style="border-color: rgba(255,255,255,0.18); color: rgba(255,255,255,0.85);">
+              <span><strong style="color:#fff;">Capstone project</strong>  ·  silver‑economy business model</span>
+              <span class="right" style="color: var(--gold-500);"><span class="counter" data-target="40" data-duration="1100">40</span>%</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 80px; padding: 32px 36px; border: 1px solid rgba(255,255,255,0.18); border-radius: 10px; background: rgba(255,255,255,0.03);">
+            <p class="eyebrow" style="color: var(--gold-500); font-size: 16px;">First session</p>
+            <p style="font-family: var(--font-display); font-size: 30px; color: var(--white); margin: 14px 0 6px 0;">Week 01 — AI Strategy in Healthcare</p>
+            <p style="font-family: var(--font-body); font-size: 20px; color: rgba(255,255,255,0.65); margin: 0;">
+              Read: Bower &amp; Christensen (1995); Davis (1989); Barney (1991).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="chrome-bottom">
+        <span style="color: rgba(255,255,255,0.55);">東海大學 · Tunghai GMBA</span>
+        <div class="rule" style="background: rgba(255,255,255,0.2);"></div>
+        <span style="color: rgba(255,255,255,0.55);">— end —</span>
+      </div>
+    </div>
+  </section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+<script>
+  /* =================================================================
+     SLIDE-ENTER ANIMATIONS
+     - chips fade/rise in stagger
+     - .counter elements count up to data-target
+     ================================================================= */
+
+  function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+  function animateCounter(el) {
+    const target = parseFloat(el.dataset.target);
+    const duration = parseInt(el.dataset.duration || '1200', 10);
+    const decimals = parseInt(el.dataset.decimals || '0', 10);
+    if (Number.isNaN(target)) return;
+
+    const start = performance.now();
+    function step(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = easeOutCubic(t);
+      const v = target * eased;
+      el.textContent = decimals > 0 ? v.toFixed(decimals) : Math.round(v).toString();
+      if (t < 1) requestAnimationFrame(step);
+      else el.textContent = decimals > 0 ? target.toFixed(decimals) : Math.round(target).toString();
+    }
+    requestAnimationFrame(step);
+  }
+
+  function animateSlide(section) {
+    // counters
+    section.querySelectorAll('.counter').forEach(el => {
+      // reset text to 0 to avoid flash; if decimal, show 0.0
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      el.textContent = decimals > 0 ? (0).toFixed(decimals) : '0';
+      // small per-element offset so big-number reveals feel orchestrated
+      animateCounter(el);
+    });
+
+    // chips — staggered
+    const chips = section.querySelectorAll('[data-chip]');
+    chips.forEach((c, i) => {
+      c.classList.remove('is-in');
+      // restart by forcing reflow
+      void c.offsetWidth;
+      setTimeout(() => c.classList.add('is-in'), 100 + i * 90);
+    });
+  }
+
+  function getCurrentSection() {
+    const stage = document.querySelector('deck-stage');
+    if (!stage) return null;
+    // deck-stage uses internal index; query slotted children by visibility instead
+    const sections = stage.querySelectorAll(':scope > section');
+    // The component sets visibility/opacity per slide; the active one has its
+    // host visible on screen. Easiest: rely on deck-stage's own index attribute
+    // by reading aria-current if set; fallback: pick by index from the URL hash.
+    const hash = location.hash || '#0';
+    const idx = parseInt(hash.replace('#',''), 10) || 0;
+    return sections[idx] || sections[0];
+  }
+
+  // Listen for slideIndexChanged messages dispatched by deck-stage
+  window.addEventListener('message', (e) => {
+    if (e.data && typeof e.data === 'object' && 'slideIndexChanged' in e.data) {
+      const stage = document.querySelector('deck-stage');
+      const sections = stage.querySelectorAll(':scope > section');
+      const sec = sections[e.data.slideIndexChanged];
+      if (sec) {
+        // tiny delay so slide is on-screen before animations begin
+        setTimeout(() => animateSlide(sec), 120);
+      }
+    }
+  });
+
+  // Initial run on load — animate slide 0 once stage is ready
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const stage = document.querySelector('deck-stage');
+      if (!stage) return;
+      const sections = stage.querySelectorAll(':scope > section');
+      // current index from deck-stage's URL hash (it stores #N)
+      const hash = location.hash || '#0';
+      const idx = parseInt(hash.replace('#',''), 10) || 0;
+      const sec = sections[idx] || sections[0];
+      if (sec) animateSlide(sec);
+    }, 300);
+  });
+</script>
+
+</body>
+</html>
